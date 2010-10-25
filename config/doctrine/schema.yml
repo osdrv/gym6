@@ -1,0 +1,9 @@
+Customer:
+#  actAs: { Timestampable: ~ }
+  columns:
+    login: { type: string(50), notnull: true, unique: true }
+    mail: { type: string(255), notnull: true }
+    name: { type: string(255), notnull: true }
+    password: { type: string(50), notnull: true }
+
+
