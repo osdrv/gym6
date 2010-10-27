@@ -17,7 +17,7 @@ $.widget('ui.formWidgetBase', {
 
 	asPublisher: function() {
 		
-		return this;
+		return [this];
 	},
 	
 	value: function() {

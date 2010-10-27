@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="js/ui.formWidgetBase.js"></script>
 		<script type="text/javascript" src="js/ui.widgetBlock.js"></script>
 		<script type="text/javascript" src="js/ui.scrollbarWidget.js"></script>
+		<script type="text/javascript" src="js/ui.scalableSet.js"></script>
 		
 		<script type="text/javascript" src="js/init.js"></script>
 	</head>	
@@ -61,11 +62,14 @@
                         <h2>Choose your length</h2>
                         <div style="position:relative; padding:20px 0; width:330px;">
                             <span style="position:absolute; top:9px; left:-30px;">min</span>
-                            <span class="raz" style="left:10px;">10</span>
-                            <span class="raz" style="left:100px;">35</span>
-                            <span class="raz big" style="left:50%;">50</span>
-                            <span class="raz" style="left:80%">80</span>
+                            <div id="scalable-set">
+                                <span class="raz" style="left:10px;">10</span>
+                                <span class="raz" style="left:100px;">35</span>
+                                <span class="raz" style="left:50%;">50</span>
+                                <span class="raz" style="left:80%">80</span>
+                            </div>
                         	<div class="slider" id="slider_length"></div>
+                        	<input type="hidden" name="data[length]" id="data_length" value="50" />
                         </div>
                     </div>
 
