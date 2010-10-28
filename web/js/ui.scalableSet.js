@@ -59,7 +59,7 @@
             if (arguments.length) {
                 this._value = arguments[0];
                 this._scale();
-                this._publish('valueChanged', this._value)
+                this._publish('valueChange', this._value)
             } else {
                 return this._value;
             }

@@ -16,21 +16,22 @@
                     self._publish('slideStart', _ui.value);
                 },
                 change: function(_e, _ui) {
-                    self._publish('valueChanged', _ui.value);
+                    self._publish('valueChange', _ui.value);
                 },
                 stop: function(_e, _ui) {
                     self._publish('slideStop', _ui.value);
                 },
                 slide: function(_e, _ui) {
                     self._publish('slide', _ui.value);
-                }
+                },
+                animate: (_o.animate !== undefined)? _o.animate : true
             });
         },
     
         value: function() {
             if (arguments.length) {
-                this.element.slider('option', 'value', atguments[0]);
-                this._publish('valueChanged', this.element.slider('option', 'value'));
+                this.element.slider('option', 'value', arguments[0]);
+                this._publish('valueChange', this.element.slider('option', 'value'));
             } else {
                 return this.element.slider('option', 'value');
             }
