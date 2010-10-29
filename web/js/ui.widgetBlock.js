@@ -10,7 +10,7 @@ $.widget('ui.widgetBlock', $.extend({}, $.ui.formWidgetBase.prototype, {
 		
 		var _e = this.element, _o = this.options, self = this;
 		this._widgets = new Object();
-		$.ui.formWidgetBase.prototype._init.apply(this, arguments);
+		$.ui.formWidgetBase.prototype._create.apply(this, arguments);
 		
 		this._widgets = _o.widgets || this._widgets;
 		_o.hide = _o.hide || function() { _e.hide() };

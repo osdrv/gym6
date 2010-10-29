@@ -1,3 +1,5 @@
+$.objectSize=function(o){var c=0;for(i in o)c++;return c}
+
 function registration() {
     $(function() {
         $('a[href="#"]').click(function(_ev) { _ev.preventDefault() });
@@ -14,24 +16,37 @@ function registration() {
             }
         }),
         _s1 = new Subscriber(),
-        _s2 = new Subscriber(),
+        //_s2 = new Subscriber(),
         _armsSlider = $('#arms-slider').scrollbarWidget(),
         _prelumSlider = $('#prelum-slider').scrollbarWidget(),
         _legsSlider = $('#legs-slider').scrollbarWidget(),
         _flexibilitySlider = $('#flexibility-slider').scrollbarWidget(),
         _buttocksSlider = $('#buttocks-slider').scrollbarWidget(),
-        _complexitySet = $('#complexity-set').buttonSet({ value: _complexityInput.val() }),
-        _complexityWeight = 20;
+        _complexityButtonSet = $('#complexity-set').buttonSet({ value: _complexityInput.val()}),
+        _complexityBlock = $('#reg_setting').complexityBlock({
+            sliders: {
+                arms: _armsSlider,
+                prelum: _prelumSlider,
+                legs: _legsSlider,
+                flexibility: _flexibilitySlider,
+                buttocks: _buttocksSlider
+            },
+            buttonSet: _complexityButtonSet,
+            value: $('#data_complexity').val()
+        })
         
         _ss.scalableSet('addSubscribeHandler', _lengthSlider.scrollbarWidget('asPublisher')[0], 'slide', function(_ev, _v) { this.value(_v) });
         _s1.addSubscribeHandler(_lengthSlider.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) { _lengthInput.val(_v) })
-        _s2.addSubscribeHandler(_complexitySet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) {
-            _complexityInput.val(_v);
-            _armsSlider.scrollbarWidget('value', _complexityWeight * _v);
-            _prelumSlider.scrollbarWidget('value', _complexityWeight * _v);
-            _legsSlider.scrollbarWidget('value', _complexityWeight * _v);
-            _flexibilitySlider.scrollbarWidget('value', _complexityWeight * _v);
-            _buttocksSlider.scrollbarWidget('value', _complexityWeight * _v);
-        })
+        
+        
+        
+        // _s2.addSubscribeHandler(_complexitySet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) {
+        //             _complexityInput.val(_v);
+        //             _armsSlider.scrollbarWidget('value', _complexityWeight * _v);
+        //             _prelumSlider.scrollbarWidget('value', _complexityWeight * _v);
+        //             _legsSlider.scrollbarWidget('value', _complexityWeight * _v);
+        //             _flexibilitySlider.scrollbarWidget('value', _complexityWeight * _v);
+        //             _buttocksSlider.scrollbarWidget('value', _complexityWeight * _v);
+        //         })
     })
 }

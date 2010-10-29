@@ -27,13 +27,15 @@
                 animate: (_o.animate !== undefined)? _o.animate : true
             });
         },
-    
+        
+        setName: function(_n) { this._name = _n },
+        
         value: function() {
             if (arguments.length) {
-                this.element.slider('option', 'value', arguments[0]);
-                this._publish('valueChange', this.element.slider('option', 'value'));
+                var _v = this.element.slider('value', arguments[0]);
+                this._publish('valueChange', _v);
             } else {
-                return this.element.slider('option', 'value');
+                return this.element.slider('value');
             }
         }
     })

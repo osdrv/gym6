@@ -40,6 +40,8 @@
         
         _addValue: function(_v) { if (!this._hasValue(_v)) this.value(this.value().push(_v)) },
         
-        _removeValue: function(_v) { var _val = this.value(), _i = $.inArray(_v, _val); if (-1 !== _i) { delete _val[_i]; this.value(_val) } }
+        _removeValue: function(_v) { var _val = this.value(), _i = $.inArray(_v, _val); if (-1 !== _i) { delete _val[_i]; this.value(_val) } },
+        
+        setName: function(_n) { this._name = _n }
     })
 })(jQuery)
