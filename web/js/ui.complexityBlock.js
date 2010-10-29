@@ -30,7 +30,7 @@
             
             $.each(_o.sliders, function(_i, _el) {
                 _el.scrollbarWidget('setName', _i);
-                self.addSubscribeHandler(_el.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) {
+                self.addSubscribeHandler(_el.scrollbarWidget('asPublisher')[0], 'slide', function(_ev, _v) {
                     if (self._deaf) return;
                     var _totalV = self._getSlidersValue(), _delta = _totalV - self._maxVal, _clones;
                     _clones = $.extend({}, _o.sliders);
