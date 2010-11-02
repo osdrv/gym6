@@ -34,10 +34,11 @@
         _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) {
           this.scale(_v / _el.scrollbarWidget('option', 'max'));
         });
+        self.addSubscribeHandler(_el.scrollbarWidget('asPublisher')[0], 'slideStop', function(_ev, _v) {
+          _el.scrollbarWidget('value', self._fade(_v));
+        })
         self.addSubscribeHandler(_el.scrollbarWidget('asPublisher')[0], 'slide', function(_ev, _v) {
           if (self._deaf) return;
-          //_el.scrollbarWidget('value', self._fade(_v));
-          _el.scrollbarWidget('value', self._fade(_v));
           var _totalV = self._getSlidersValue(),
           _minVal = self.approximation,
           _delta = _totalV - self._maxVal,
@@ -70,13 +71,14 @@
     //_approximation: { 0:8, 1:8, 2:8, 3:8, 4:9, 5:9, 6:10, 7:10, 8:11, 9:11, 10:12, 11:12, 12:13, 13:13 },
 
     _fade: function(_x) {
+      _x = (_x > 0)? _x : 0;
       return (this._approximation[_x] !== undefined)? this._approximation[_x] : _x;
     },
     
     _unfade: function(_x) {
       var _a = this._approximation,
       _s = $.objectSize();
-      return (_x >= _a[_s - 1])? _x : (function(_v) { var _r = _v; $.each(_a, function(_i, _el) { if (_v == _i) { _r = _el; return false }}); return _r })(_x);
+      return (_x >= _a[_s - 1])? _x : (function(_v) { var _r = _v; $.each(_a, function(_i, _el) { if (_v == _i) { _r = _el } else if (_v < _i) { return false }}); return _r })(_x);
     },
 
     _getSlidersValue: function() {
