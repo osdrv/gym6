@@ -42,6 +42,13 @@ function registration() {
           flexibility: _flexibilityLabel,
           buttocks: _buttocksLabel
         },
+				indicators: {
+					arms: $('#indicator-arms'),
+          prelum: $('#indicator-prelum'),
+          legs: $('#indicator-legs'),
+          flexibility: $('#indicator-flexibility'),
+          buttocks: $('#indicator-buttocks')
+				},
         buttonSet: _complexityButtonSet,
         value: $('#data_complexity').val()
       })

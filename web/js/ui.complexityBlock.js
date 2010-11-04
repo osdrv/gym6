@@ -12,6 +12,7 @@
     options: {
       sliders: {},
       labels: {},
+			indicators: {},
       buttonSet: null,
       weight: 20,
       value: 0
@@ -31,9 +32,13 @@
 
       $.each(_o.sliders, function(_i, _el) {
         _el.scrollbarWidget('setName', _i);
-        _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) {
-          this.scale(_v / _el.scrollbarWidget('option', 'max'));
-        });
+				var _labelOnChange = function(_ev, _v) {
+					var _multiple = _v / _el.scrollbarWidget('option', 'max');
+          this.scale(_multiple);
+					_o.indicators[_i].css('opacity', _multiple);
+        }
+        _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'slide', _labelOnChange);
+        _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'valueChange', _labelOnChange);
         self.addSubscribeHandler(_el.scrollbarWidget('asPublisher')[0], 'slideStop', function(_ev, _v) {
           _el.scrollbarWidget('value', self._fade(_v));
         })

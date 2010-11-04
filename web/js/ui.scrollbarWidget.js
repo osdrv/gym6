@@ -24,7 +24,7 @@
                 slide: function(_e, _ui) {
                     self._publish('slide', _ui.value);
                 },
-                animate: (_o.animate !== undefined)? _o.animate : true
+                animate: (_o.animate !== undefined)? _o.animate : 1000
             });
         },
         
