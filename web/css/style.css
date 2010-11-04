@@ -137,7 +137,8 @@ a {color:#2a5782;}
 				
 				.reg_date .days {background:url(../img/day.png) no-repeat; height:32px; width:335px;}
 				.reg_date .days a {width:45px; margin-left:2px; float:left; line-height:30px; text-align:center; text-decoration:none; color:#5a5a5a;}	
-				.reg_date .days a.select {background:url(../img/day_select.png) top left repeat-x;}
+				.reg_date .days a:hover {background:url(../img/day_select.png) top left repeat-x;}
+				.reg_date .days a.select {background:#bae3fb;}
 				.reg_date .days a.first {width:49px; margin:0px}
 				.reg_date .days a.last {width:47px;}
 				.reg_date .days a.first:hover, .reg_date .days a.first_select, .reg_date .days a.last:hover, .reg_date .days a.last_select {height:32px; background:url(../img/day_select_corner.png);}
@@ -150,7 +151,16 @@ a {color:#2a5782;}
 				.reg_date .month h3 {font-size:14px; font-weight:normal; text-align:center; line-height:20px; padding:8px 0 5px}
 				.reg_date .month div {width:43px; float:left; margin-right:2px;}
 				.reg_date .month a {line-height:30px; margin-bottom:2px; text-align:center; color:#5a5a5a; display:block; text-decoration:none;}	
-				.reg_date .select a, .reg_date a.select, .reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}
+				.reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}
+				.reg_date .select a, .reg_date a.select {background:#bae3fb;}
+				
+				.reg_date .first.select {-moz-border-radius:7px 0 0 7px; -webkit-border-radius:7px 0 0 7px; border-radius:7px 0 0 7px} 
+				.reg_date .last.select {-moz-border-radius:0 7px 7px 0; -webkit-border-radius:0 7px 7px 0; border-radius:0 7px 7px 0}
+				
+				.month .first a:first-child {-moz-border-radius:7px 0 0 0; -webkit-border-radius:7px 0 0 0; border-radius:7px 0 0 0}
+				.month .first a:last-child {-moz-border-radius:0 0 0 7px; -webkit-border-radius:0 0 0 7px; border-radius:0 0 0 7px}
+				.month .last a:first-child {-moz-border-radius:0 7px 0 0; -webkit-border-radius:0 7px 0 0; border-radius:0 7px 0 0}
+				.month .last a:last-child {-moz-border-radius:0 0 7px 0; -webkit-border-radius:0 0 7px 0; border-radius:0 0 7px 0}
 				
 				.reg_complexity div {background:url(../img/complexity.png) top left no-repeat; height:56px;}
 				.reg_complexity div a {float:left; height:56px; text-align:center; line-height:35px; width:81px; text-decoration:none; color:#5a5a5a;}
@@ -159,28 +169,21 @@ a {color:#2a5782;}
 				.reg_complexity a.c2:hover {background-position:-81px -56px;}
 				.reg_complexity a.c3:hover {background-position:-162px -56px;}
 				.reg_complexity a.c4:hover {background-position:-243px -56px;}
+				.reg_complexity a.c1.select {background:url(../img/complexity.png) 0 -112px;}
+				.reg_complexity a.c2.select {background:url(../img/complexity.png) -81px -112px;}
+				.reg_complexity a.c3.select {background:url(../img/complexity.png) -162px -112px;}
+				.reg_complexity a.c4.select {background:url(../img/complexity.png) -243px -112px;}
 				
 				.reg_setting .slider {width:340px; margin:0 0 35px;}
 				.reg_setting .slider span {position:absolute; width:100px; text-align:right; left:-110px; top:-12px; font-size:16px;}
-				.reg_setting .man {width:65px; height:210px; background:url(../img/man.png); position:absolute; top:65px; left:130px;}
+				.reg_setting .men {width:64px; height:208px; background:url(../img/men.png); position:absolute; top:65px; left:130px;}
 				
-				.reg_setting .telo {position:absolute; top:66px; left:14px;}
-				.telo div {width:36px; height:35px;}
-				.telo .r1 {background:url(../img/man.png) -65px 0;}
-				.telo .r2 {background:url(../img/man.png) -101px 0;}
-				.telo .r3 {background:url(../img/man.png) -137px 0;}
-				
-				.reg_setting .nogi {position:absolute; top:104px; left:12px;}
-				.nogi div {width:39px; height:104px;}
-				.nogi .r1 {background:url(../img/man.png) -65px -35px;}
-				.nogi .r2 {background:url(../img/man.png) -104px -35px;}
-				.nogi .r3 {background:url(../img/man.png) -143px -35px;}
-				
-				.reg_setting .ruki {position:absolute; top:39px; left:0px;}
-				.ruki div {width:62px; height:81px;}
-				.ruki .r1 {background:url(../img/man.png) -65px -139px;}
-				.ruki .r2 {background:url(../img/man.png) -128px -139px;}
-				.ruki .r3 {background:url(../img/man.png) -191px -139px;}
+				.men i {position:absolute; background:url(../img/men.png);}
+				.reg_setting .s1 {top:66px; left:13px; background-position: -100px 0; width:40px; height:40px;}
+				.reg_setting .s2 {top:40px; left:0px; background-position: -100px -50px; width:65px; height:80px;}
+				.reg_setting .s3 {top:99px; left:-1px; background-position: -100px -140px; width:55px; height:110px;}
+				.reg_setting .s4 {top:0px; left:-2px; background-position: -180px -40px; width:66px; height:208px;}
+				.reg_setting .s5 {top:102px; left:12px; background-position: -200px 0; width:40px; height:30px;}
 				
 				.sip {background:url(../img/sip.png); width:237px; height:50px; display:block; margin-left:320px}
 				.sip:hover {background-position:center center;}

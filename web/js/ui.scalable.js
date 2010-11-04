@@ -17,7 +17,7 @@
       var _e = this.element,
       _o = this.options,
       _fSize = _o.min_font_size + (_o.max_font_size - _o.min_font_size) * _v;
-      _e.animate({ 'font-size': _fSize + 'px' }, { duration: 500, queue: false});
+      _e.animate({ 'font-size': _fSize + 'px' }, { duration: 1000, queue: false});
     }
   })
 })(jQuery)

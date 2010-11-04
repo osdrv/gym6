@@ -26,7 +26,7 @@ function registration() {
       _flexibilityLabel = $('#flexibility-slider span').scalable(),
       _buttocksSlider = $('#buttocks-slider').scrollbarWidget(),
       _buttocksLabel = $('#buttocks-slider span').scalable(),
-      _complexityButtonSet = $('#complexity-set').buttonSet({ value: _complexityInput.val()}),
+      _complexityButtonSet = $('#complexity-set').buttonSet({ value: _complexityInput.val(), name: 'buttons' }),
       _complexityBlock = $('#reg_setting').complexityBlock({
         sliders: {
           arms: _armsSlider,

@@ -28,9 +28,7 @@ $.widget('ui.formWidgetBase', {
 		}
 		
 		if (arguments.length) {
-			
 			if (this._value != arguments[0]) {
-				
 				this._value = arguments[0];
 				this._publish('valueChange', this._value);
 			}

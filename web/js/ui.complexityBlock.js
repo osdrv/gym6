@@ -35,7 +35,7 @@
 				var _labelOnChange = function(_ev, _v) {
 					var _multiple = _v / _el.scrollbarWidget('option', 'max');
           this.scale(_multiple);
-					_o.indicators[_i].css('opacity', _multiple);
+					_o.indicators[_i].animate({ opacity: _multiple }, { duration: 1000, queue: false });
         }
         _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'slide', _labelOnChange);
         _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'valueChange', _labelOnChange);
@@ -63,11 +63,10 @@
         })
       })
 
-      _o.buttonSet.buttonSet('setName', 'buttons');
       this.addSubscribeHandler(_o.buttonSet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) {
         self.value(parseInt(_v, 10));
       })
-
+      
       this.value(_o.value);
     },
 
