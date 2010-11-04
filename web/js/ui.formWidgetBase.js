@@ -21,12 +21,7 @@ $.widget('ui.formWidgetBase', {
 	},
 	
 	value: function() {
-		
-		if (!this._enabled) {
-		
-			return -1;
-		}
-		
+		if (!this._enabled) return -1;
 		if (arguments.length) {
 			if (this._value != arguments[0]) {
 				this._value = arguments[0];

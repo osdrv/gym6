@@ -37,7 +37,15 @@
         			
                     <div class="reg_date" id="reg_date">
                     	<h2>Set your schedule <a href="#" class="q"></a></h2>
-                        <div class="days"><a href="#" class="first">Mon</a><a href="#">Tu</a><a href="#">Wed</a><a href="#">Thu</a><a href="#">Fri</a><a href="#" class="pink">Sat</a><a href="#" class="last pink">Sun</a></div>
+                        <div id="week-date-selector" class="days">
+							<a href="#" class="first" value="1">Mon</a>
+							<a href="#" value="2">Tu</a>
+							<a href="#" value="3">Wed</a>
+							<a href="#" value="4">Thu</a>
+							<a href="#" value="5">Fri</a>
+							<a href="#" class="pink" value="6">Sat</a>
+							<a href="#" class="last pink" value="0">Sun</a>
+						</div>
                         <div class="weeks">          
                             <div class="month">
                                 <h3>October</h3>
@@ -103,15 +111,15 @@
                     
                         <div style="width:340px; padding-bottom:5px;"><span style="float:right">max</span>min</div>
                         <div class="slider" id="arms-slider"><span>Arms</span></div>
-                        <input type="hidden" name="data[arms]" id="data_arms" value="2" />
+                        <input type="hidden" name="data[arms]" id="data_arms" value="" />
                         <div class="slider" id="prelum-slider"><span>Prelum</span></div>
-                        <input type="hidden" name="data[prelum]" id="data_prelum" value="2" />
+                        <input type="hidden" name="data[prelum]" id="data_prelum" value="" />
                         <div class="slider" id="legs-slider"><span>Legs</span></div>
-                        <input type="hidden" name="data[legs]" id="data_legs" value="2" />
+                        <input type="hidden" name="data[legs]" id="data_legs" value="" />
                         <div class="slider" id="flexibility-slider"><span>Flexibility</span></div>
-                        <input type="hidden" name="data[flexibility]" id="flexibility" value="2" />
+                        <input type="hidden" name="data[flexibility]" id="data_flexibility" value="" />
                         <div class="slider" id="buttocks-slider"><span>Buttocks</span></div> 
-                        <input type="hidden" name="data[buttocks]" id="data_buttocks" value="2" />
+                        <input type="hidden" name="data[buttocks]" id="data_buttocks" value="" />
                     </div>
                 
                     <a href="#" class="sip"></a>

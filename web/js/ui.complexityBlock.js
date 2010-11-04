@@ -20,7 +20,7 @@
 
     _create: function() {
       var _e = this.element, _o = this.options, self = this;
-
+      if (_o.value_holder) _o.value = _o.value_holder.val();
       $.ui.formWidgetBase.prototype._create.apply(this, arguments);
       
       this.addSubscribeHandler(this, 'valueChange', function(_ev, _v) {
@@ -29,13 +29,14 @@
         $.each(_o.sliders, function(_i, _el) { _el.scrollbarWidget('value', _v * _o.weight) })
         self._deaf = false;
       })
-
+      
       $.each(_o.sliders, function(_i, _el) {
         _el.scrollbarWidget('setName', _i);
 				var _labelOnChange = function(_ev, _v) {
 					var _multiple = _v / _el.scrollbarWidget('option', 'max');
           this.scale(_multiple);
 					_o.indicators[_i].animate({ opacity: _multiple }, { duration: 1000, queue: false });
+					_o.inputs[_i].val(_v);
         }
         _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'slide', _labelOnChange);
         _o.labels[_i].scalable('addSubscribeHandler', _el.scrollbarWidget('asPublisher')[0], 'valueChange', _labelOnChange);
@@ -69,6 +70,7 @@
       
       this.addSubscribeHandler(_o.buttonSet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) {
         self.value(parseInt(_v, 10));
+        if (_o.value_holder) _o.value_holder.val(_v);
       })
       
       this.value(_o.value);

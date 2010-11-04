@@ -12,9 +12,8 @@
       _o.selectedClass = _o.selectedClass || 'select';
       _o.multiple = (_o.multiple !== undefined)? _o.multiple : false;
       _o.getVal = (_o.getVal !== undefined)? _o.getVal : self._getVal;
-      if (_o.multiple && (!$.isArray(_o.value) || (_o.value !== undefined))) _o.value = (_o.value === undefined)? [] : [_o.value];
+      if (_o.multiple && (!$.isArray(_o.value) || (_o.value === undefined))) _o.value = (_o.value === undefined)? [] : [_o.value];
       this._buttons = (_o.getButtons !== undefined)? _o.getButtons() : this._getButtons();
-      
       this._buttons.click(function() {
         this.blur();
         var _val = _o.getVal($(this));
@@ -50,10 +49,13 @@
 
     _hasValue: function(_v) { return -1 !== $.inArray(_v, this._value) },
 
-    _addValue: function(_v) { if (!this._hasValue(_v)) this.value(this.value().push(_v)) },
+    _addValue: function(_v) { 
+      var _val = $.extend([], this.value());
+      if (!this._hasValue(_v)) { _val.push(_v); this.value(_val); }
+    },
 
-    _removeValue: function(_v) { var _val = this.value(), _i = $.inArray(_v, _val); if (-1 !== _i) { delete _val[_i]; this.value(_val) } },
+    _removeValue: function(_v) { var _val = $.extend([], this.value()), _i = $.inArray(_v, _val); if (-1 !== _i) { _val.splice(_i, 1); this.value(_val) } },
 
     setName: function(_n) { this._name = _n }
   })
-  })(jQuery)
+})(jQuery)
