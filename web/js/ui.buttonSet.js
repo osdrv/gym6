@@ -18,6 +18,7 @@
       this._buttons.click(function() {
         this.blur();
         var _val = _o.getVal($(this));
+        self._publish('buttonClick', _val);
         if (!_o.multiple) {
           self.value(_val);
         } else {

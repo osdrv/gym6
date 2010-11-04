@@ -22,7 +22,7 @@
       var _e = this.element, _o = this.options, self = this;
 
       $.ui.formWidgetBase.prototype._create.apply(this, arguments);
-
+      
       this.addSubscribeHandler(this, 'valueChange', function(_ev, _v) {
         self._maxVal = _v * _o.weight * $.objectSize(_o.sliders);
         self._deaf = true;
@@ -62,7 +62,11 @@
           })
         })
       })
-
+      
+      this.addSubscribeHandler(_o.buttonSet.buttonSet('asPublisher')[0], 'buttonClick', function(_ev, _v) {
+        if (_v == self.value()) self._publish('valueChange', _v);
+      })
+      
       this.addSubscribeHandler(_o.buttonSet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) {
         self.value(parseInt(_v, 10));
       })
