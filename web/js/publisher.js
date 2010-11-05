@@ -15,6 +15,16 @@ var publisher = function(_obj) {
 			this._subscribers[_event].push(_subscriber);
 		},
 		
+		unsubscribe: function(_event, _subscriber) {
+		  if ($.isArray(this._subscribers[_event])) {
+		    var _pos = $.inArray(_subscriber);
+		    if (-1 !== _pos) {
+		      this._subscribers[_event].splice(_pos, 1);
+		      if (!this._subscribers[_event].length) delete this._subscribers[_event];
+		    }
+		  }
+		},
+		
 		_publish: function(_event, _value) {
 
 			var _events = ['*', _event],

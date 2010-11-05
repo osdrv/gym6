@@ -40,8 +40,7 @@ var subscriber = function (_obj) {
 		},
 		
 		removeSubscribeHandler: function(_publisher, _event) {
-			
-			delete this._subscribe_handlers[_event];
+			delete this._subscribe_handlers[_publisher._name + '.' + _event];
 			_publisher.unsubscribe(_event, this);
 		}
 	};

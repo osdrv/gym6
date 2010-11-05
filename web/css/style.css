@@ -137,12 +137,14 @@ a {color:#2a5782;}
 				
 				.reg_date .days {background:url(../img/day.png) no-repeat; height:32px; width:335px;}
 				.reg_date .days a {width:45px; margin-left:2px; float:left; line-height:30px; text-align:center; text-decoration:none; color:#5a5a5a;}	
-				.reg_date .days a:hover {background:url(../img/day_select.png) top left repeat-x;}
 				.reg_date .days a.first {width:49px; margin:0px}
 				.reg_date .days a.last {width:47px;}
-				.reg_date .days a.first:hover, .reg_date .days a.first_select, .reg_date .days a.last:hover, .reg_date .days a.last_select {height:32px; background:url(../img/day_select_corner.png);}
-				.reg_date .days a.last:hover, .reg_date .days a.last_select {height:32px; background:url(../img/day_select_corner.png) top right;} 
-				
+				/*
+				should be refactored, because selected element on hover event looks like ordinary grey hovered element
+				.reg_date .days a:hover {background:url(../img/day_select.png) top left repeat-x;}
+				.reg_date .days a.first:hover, .reg_date .days a.first.select, .reg_date .days a.last:hover, .reg_date .days a.last.select {height:32px; background:url(../img/day_select_corner.png);}
+				.reg_date .days a.last:hover, .reg_date .days a.last.select {height:32px; background:url(../img/day_select_corner.png) top right;}
+				*/
 				.reg_date .weeks {clear:both; margin-left:-155px;}
 				
 				.reg_date .month {width:315px; float:left; margin-right:20px; background:url(../img/mounth.png) left bottom no-repeat;}
@@ -150,12 +152,14 @@ a {color:#2a5782;}
 				.reg_date .month h3 {font-size:14px; font-weight:normal; text-align:center; line-height:20px; padding:8px 0 5px}
 				.reg_date .month div {width:43px; float:left; margin-right:2px;}
 				.reg_date .month a {line-height:30px; margin-bottom:2px; text-align:center; color:#5a5a5a; display:block; text-decoration:none;}	
-				.reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}
+				/*.reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}*/
 				.reg_date .month .select a, .reg_date .month a.select {background:#bae3fb;}
-				.reg_date .days a.select {background-color:#bae3fb; background-image:none;}
-        
+				
 				.reg_date .first.select {-moz-border-radius:7px 0 0 7px; -webkit-border-radius:7px 0 0 7px; border-radius:7px 0 0 7px} 
 				.reg_date .last.select {-moz-border-radius:0 7px 7px 0; -webkit-border-radius:0 7px 7px 0; border-radius:0 7px 7px 0}
+				
+				.reg_date .days a.select {background-color:#bae3fb; background-image:none;}
+        
 				
 				.month .first a:first-child {-moz-border-radius:7px 0 0 0; -webkit-border-radius:7px 0 0 0; border-radius:7px 0 0 0}
 				.month .first a:last-child {-moz-border-radius:0 0 0 7px; -webkit-border-radius:0 0 0 7px; border-radius:0 0 0 7px}

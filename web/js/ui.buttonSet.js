@@ -11,12 +11,13 @@
       $.ui.formWidgetBase.prototype._create.apply(this, arguments);
       _o.selectedClass = _o.selectedClass || 'select';
       _o.multiple = (_o.multiple !== undefined)? _o.multiple : false;
-      _o.getVal = (_o.getVal !== undefined)? _o.getVal : self._getVal;
+      _o.getVal = _o.getVal || self._getVal;
       if (_o.multiple && (!$.isArray(_o.value) || (_o.value === undefined))) _o.value = (_o.value === undefined)? [] : [_o.value];
-      this._buttons = (_o.getButtons !== undefined)? _o.getButtons() : this._getButtons();
+      _o.getButtons = _o.getButtons || this._getButtons;
+      this._buttons = _o.getButtons.call(this);
       this._buttons.click(function() {
         this.blur();
-        var _val = _o.getVal($(this));
+        var _val = _o.getVal.call(self, $(this));
         self._publish('buttonClick', _val);
         if (!_o.multiple) {
           self.value(_val);
@@ -35,7 +36,7 @@
           })
         } else {
           this._buttons.removeClass(_o.selectedClass).each(function(_i, _el) {
-            if (self._hasValue(self._getVal($(_el)))) $(_el).addClass(_o.selectedClass); else $(_el).removeClass(_o.selectedClass);
+            if (self._hasValue(_o.getVal.call(self, $(_el)))) $(_el).addClass(_o.selectedClass); else $(_el).removeClass(_o.selectedClass);
           })
         }
       })
@@ -49,7 +50,7 @@
 
     _hasValue: function(_v) { return -1 !== $.inArray(_v, this._value) },
 
-    _addValue: function(_v) { 
+    _addValue: function(_v) {
       var _val = $.extend([], this.value());
       if (!this._hasValue(_v)) { _val.push(_v); this.value(_val); }
     },

@@ -21,6 +21,7 @@ function registration() {
     _buttocksLabel = $('#buttocks-slider span').scalable(),
     _complexityButtonSet = $('#complexity-set').buttonSet({ value: _complexityInput.val(), name: 'buttons' }),
     _weekSelectorButtonSet = $('#week-date-selector').buttonSet({ value: [], name: 'week', multiple: true }),
+    _monthsButtonSet = $('#month-date-selector').monthCalendar({ value: [], name: 'months' }),
     _complexityBlock = $('#reg_setting').complexityBlock({
       sliders: {
         arms: _armsSlider,
@@ -52,9 +53,21 @@ function registration() {
       },
       buttonSet: _complexityButtonSet,
       value_holder: $('#data_complexity')
-    })
+    });
+    _s1._name = 'subscriber1';
 
     _ss.scalableSet('addSubscribeHandler', _lengthSlider.scrollbarWidget('asPublisher')[0], 'slide', function(_ev, _v) { this.value(_v) });
-    _s1.addSubscribeHandler(_lengthSlider.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) { _lengthInput.val(_v) })
+    _s1.addSubscribeHandler(_lengthSlider.scrollbarWidget('asPublisher')[0], 'valueChange', function(_ev, _v) { _lengthInput.val(_v) });
+    _weekSelectorButtonSet.buttonSet('addSubscribeHandler', _monthsButtonSet.monthCalendar('asPublisher')[0], 'dayOfWeekTrack', function(_ev, _v) {
+      if (_v.enabled) {
+        this._addValue(_v.day);
+      } else {
+        this._removeValue(_v.day);
+      }
+    });
+    _monthsButtonSet.monthCalendar('addSubscribeHandler', _weekSelectorButtonSet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) { this.selectDays(_v) });
+    _s1.addSubscribeHandler(_monthsButtonSet.monthCalendar('asPublisher')[0], 'valueChange', function(_ev, _v) {
+      $('#data_dates').val(_v.join(','))
+    })
   })
 }
