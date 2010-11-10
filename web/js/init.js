@@ -68,6 +68,12 @@ function registration() {
     _monthsButtonSet.monthCalendar('addSubscribeHandler', _weekSelectorButtonSet.buttonSet('asPublisher')[0], 'valueChange', function(_ev, _v) { this.selectDays(_v) });
     _s1.addSubscribeHandler(_monthsButtonSet.monthCalendar('asPublisher')[0], 'valueChange', function(_ev, _v) {
       $('#data_dates').val(_v.join(','))
-    })
+    });
+    $('#tabs').tabs({
+      template: {
+        selected: '<strong class="a">%s</strong>',
+        active: '<a href="javascript:void(0);" class="s">%s</a>'
+      }
+    });
   })
 }
