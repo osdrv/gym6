@@ -1,5 +1,17 @@
 $.objectSize=function(o){var c=0;for(i in o)c++;return c}
 
+if (!Array.indexOf) {
+  Array.prototype.indexOf = function(obj) {
+    for (var i=0; i < this.length; i++) {
+      if (this[i] == obj) {
+        return i;
+      }
+    }
+    return -1;
+  }
+}
+
+
 function registration() {
   $(function() {
     $('a[href="#"]').click(function(_ev) { _ev.preventDefault() });
