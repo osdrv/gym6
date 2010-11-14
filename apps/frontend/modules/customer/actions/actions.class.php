@@ -10,6 +10,14 @@
  */
 class customerActions extends sfActions
 {
+  public function executeRegistration2(sfWebRequest $request)
+  {
+  }
+
+  public function executePay(sfWebRequest $request)
+  {
+  }
+
   public function executeIndex(sfWebRequest $request)
   {
     $this->customers = Doctrine::getTable('customer')

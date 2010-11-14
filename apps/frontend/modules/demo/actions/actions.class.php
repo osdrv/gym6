@@ -19,4 +19,7 @@ class demoActions extends sfActions
   {
     //$this->forward('default', 'module');
   }
+  public function executeFaq(sfWebRequest $request)
+  {
+  }
 }
