@@ -10,14 +10,13 @@
             <div class="texts"><div class="wrap">
                 <div class="column_right">
                     <div class="block c4">
-                        <img src="/img/temp/gb.jpg" /> <span>Meet <a href="#">Jane Doe</a>, your Gym6 coach</span>
+                        <img src="/img/temp/gb.jpg" /> <span>Meet <a href="#">Valerie Readfield</a>,<br /> your Gym6 fitness coach</span>
                     </div>
                     <div class="block c5">
-                        <a href="#" class="title">Edward Cadderley</a>
-                        <p>has been a fitness coach for nearly 10 years. <br />He has developed all the Gym6 routines.</p>
+                        <a href="#" class="title">Edward Colson</a>
+                        <p>has over 10 years of experience as a personal fitness trainer and <br /> has designed the entire series of Gym6 routines.</p>
                         <img src="/img/temp/mb.jpg" class="img" />
-                        <cite>I was really excited to work for Gym6. Many people miss a great deal in their life just because they don't have time to visit a fitness studio.
-                        I hope I've helped these people change something.</cite>
+                        <cite>I developed the Gym6 program as a great way for busy people to enjoy all the benefits of looking and feeling great on their own schedule without having to make special trips to a gym or fitness studio.</cite>
                     </div>
                     <div class="block c6">
                         <a href="<?php echo url_for('demo/faq') ?>" class="title">Q&amp;A</a>
@@ -68,8 +67,8 @@ You know<br /> you'll work harder when someone's watching!<br /></p>
                 <p>"The Gym6 name carries over from a goal I had once set for myself to work out "six days a week for six weeks in a row" and it stands for my personal commitment to providing you with an effective and time-saving personal fitness program with the freedom to choose when and how often you exercise."</p>
             </div>
             <div class="form">
-                <h3>Still got questions?</h3>
+                <h3>Need more information?</h3>
                 <input type="text" class="text" value="E-mail" style="color:#8a8a8a;" />
-                <textarea style="color:#8a8a8a;">Ask Mary about the service, or tell her your opinion; she will answer in a couple of hours.</textarea>
+                <textarea style="color:#8a8a8a;">Ask Valerie about the service, or tell her your opinion; she will answer in a couple of hours.</textarea>
                 <input type="submit" class="submit" value="Ask" />
             </div>

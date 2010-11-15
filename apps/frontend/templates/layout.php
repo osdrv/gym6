@@ -68,8 +68,11 @@
 </div>
         </div>
         <div id="footer"><div>
-            <p>To get support — financial or technological — write Mary Jenkins to <a href="#">mary@gym6.com</a></p>
-            Gym6 has been produced by Dan Ayphor. <br /><a href="#">Write him</a> to tell your opinion or discuss business opportunities.
+            <p>Have any further questions, comments, or suggestions? Just email Julie, our Client Representative and you can expect to receive a response within approximately 1-3 hours.</p>
+            Gym6.com was created by Dan Bennington.
+            Dan welcomes and appreciates your input about the Gym6 website.
+            Please feel free to <a href="#">email</a> Dan with your comments or to find out more
+            about business opportunities with Gym6.
         </div></div>
 
 
