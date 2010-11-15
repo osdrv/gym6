@@ -2,9 +2,9 @@
                 <a href="#"></a>
             </div>
             <ul class="steps">
-                <li><strong>Set up your course</strong><img src="/img/temp/s1.jpg" /></li>
-                <li><strong>Tune your schedule<br />and reminders</strong><img src="/img/temp/s2.jpg" /></li>
-                <li><strong>Gym6 will compile your<br />personal video routines</strong><img src="/img/temp/s3.jpg" /></li>
+                <li><strong>Set up your routine</strong><img src="/img/temp/s1.jpg" /></li>
+                <li><strong>Create a schedule<br />& set reminders</strong><img src="/img/temp/s2.jpg" /></li>
+                <li><strong>Start your personalized video workouts</strong><img src="/img/temp/s3.jpg" /></li>
             </ul>
 
             <div class="texts"><div class="wrap">
@@ -23,39 +23,39 @@
                         <a href="<?php echo url_for('demo/faq') ?>" class="title">Q&amp;A</a>
                         <dl>
                             <dt>How often do I need to work out?</dt>
-                            <dd>As often as you like. Gym6 allows you to set your work out frequency from once a week to daily. If you get tired, or want more juice, you can change the setting anytime.</dd>
-                            <dt>Do I need equipment?</dt>
-                            <dd>At the moment — none. We will introduce new courses in the future, some of which will require you to have an athletic track or a yoga pad.</dd>
+                            <dd>As often as you'd like. Gym6 allows you to set your workout frequency anywhere from once per week to daily. And you can change the number of workouts at any time if you find you need to push yourself more - or less.</dd>
+                            <dt>Do I need any equipment?</dt>
+                            <dd>None of our video routines require any special equipment. In the future we may be introducing optional routines that require you to use a treadmill or yoga pad.</dd>
                         </dl>
                         <a href="#">See more</a>
                     </div>
                 </div>
                 <div class="column_left">
                     <div class="block c1">
-                        <a href="#" class="title">You're now a last-ditcher</a><br />
+                        <a href="#" class="title">You'll know when it's time to get physical</a><br />
                         <img src="/img/temp/mb.png" />
                         <ul>
-                            <li><span>•</span> Specify your phone number and e-mail address</li>
-                            <li><span>•</span> Decide on your reminder frequency</li>
-                            <li><span>•</span> Gym6 will text you every time you need to work out</li>
+                            <li><span>•</span> Provide your mobile phone number or email address</li>
+                            <li><span>•</span> Choose a reminder frequency</li>
+                            <li><span>•</span> Gym6 notifies you of your workouts</li>
                         </ul>
-                        <p>If you miss your routines, you'll get a refresher e-mail</p>
+                        <p><!-- If you miss your routines, you'll get a refresher e-mail --></p>
                     </div>
                     <div class="block c2">
                         <a href="#" class="sc"><img src="/img/sc1.png" /></a><a href="#" class="sc"><img src="/img/sc2.png" /></a><a href="#" class="sc"><img src="/img/sc3.png" /></a>
-                        <a href="#" class="title">With a little help from your friends</a>
+                        <a href="#" class="title">That's what friends are for</a>
                         <img src="/img/temp/cb.png" style="float:left;" />
-                        <p>If you like, you can share Gym6 progress<br />with your friends on Facebook or Twitter </p>
-                        <p>You know you do better when someone's<br />watching, don't you?</p>
+                        <p>Easily share your Gym6 progress with your <br />friends on Facebook and Twitter.
+You know<br /> you'll work harder when someone's watching!<br /></p>
                     </div>
                     <div class="block c3">
-                        <a href="#" class="title">Persistence pays back</a>
+                        <a href="#" class="title">Persistence pays off</a>
                         <ul>
-                            <li class="p1"><span>First month</span><strong><em>$</em>100</strong></li>
-                            <li class="p2"><span>Second month</span><strong><em>$</em>80</strong></li>
-                            <li class="p3"><span>Sixth month</span><strong><em>$</em>10</strong></li>
+                            <li class="p1"><span>1st month:</span><strong><em>$</em>100</strong></li>
+                            <li class="p2"><span>2nd-5th month:</span><strong><em>$</em>80</strong></li>
+                            <li class="p3"><span>6th month:</span><strong><em>$</em>10</strong></li>
                         </ul>
-                        <p>Save <em>$</em>230 on the six-month subscription.</p>
+                        <p>Save <em>$</em>230 on a 6-month membership subscription.</p>
 
                     </div>
                 </div>
@@ -65,10 +65,7 @@
             <div class="about">
                 <h3><a href="#">About Gym6</a></h3>
                 <img src="/img/temp/db.jpg" class="img" />
-                <p>Curabitur eleifend arcu ac sapien bibendum dignissim vitae sit amet eros. Nam sit amet tempus tortor. </p>
-                <p>Sed placerat rhoncus risus vitae venenatis. Pellentesque vel turpis sem, id accumsan eros. </p>
-                <p>Maecenas sollicitudin fermentum interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Donec vel eros elit. Nam venenatis, dolor vitae accumsan congue, lacus nisi laoreet eros, nec elementum eros velit sed enim. </p>
+                <p>"The Gym6 name carries over from a goal I had once set for myself to work out "six days a week for six weeks in a row" and it stands for my personal commitment to providing you with an effective and time-saving personal fitness program with the freedom to choose when and how often you exercise."</p>
             </div>
             <div class="form">
                 <h3>Still got questions?</h3>
