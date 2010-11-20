@@ -6,7 +6,6 @@
                         <a href="#" class="s">Simple</a>
                         <strong class="a">Advanced</strong>
                     </div>
-
                     <div class="reg_date" id="reg_date">
                         <h2>Set your schedule <a href="#" class="q"></a></h2>
                         <div id="week-date-selector" class="days">
@@ -19,6 +18,28 @@
                             <a href="#" class="last pink" value="0">Sun</a>
                         </div>
                         <div class="weeks" id="month-date-selector">
+                            <div class="month">
+                                <h3><?php echo $n_o_month?></h3>
+                                <?php $mv=0; foreach($mdays as $mweeks) {?>
+                                <?php $c = ($mv?($mv==5?'pink':($mv==6?'pink last':'')):'first'); $mv++;?>
+                                <div class="<?php echo $c ?>" day="<?php echo $mv?>">
+                                <?php foreach($mweeks as $mdays) {?>
+                                <a href="#" title="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
+                                <?php } ?>
+                                </div>
+                                <?php } ?>
+                            </div>
+                            <div class="month">
+                                <h3><?php echo $n_o_month1 ?></h3>
+                                <?php $mv=0; foreach($mdays1 as $mweeks) {?>
+                                <?php $c = ($mv?($mv==5?'pink':($mv==6?'pink last':'')):'first'); $mv++;?>
+                                <div class="<?php echo $c ?>" day="<?php echo $mv?>">
+                                <?php foreach($mweeks as $mdays) {?>
+                                <a href="#" title="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
+                                <?php } ?>
+                                </div>
+                                <?php } ?>
+                            </div>
                             <div class="month">
                                 <h3>October</h3>
                                 <div class="first" day="1"><a href="#" date="2010.09.27">27</a><a href="#" date="2010.10.04">4</a><a href="#" date="2010.10.11">11</a><a href="#" date="2010.10.18">18</a><a href="#" date="2010.10.25">25</a></div>
