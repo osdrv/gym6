@@ -18,3 +18,7 @@ default:
 
   has_layout:     true
   layout:         layout
+registration2Success:
+  javascripts: [jquery-1.4.3.js, jquery-ui.js, jquery.ui.slider.js, publisher.js, subscriber.js, ui.formBase.js, ui.formWidgetBase.js, ui.widgetBlock.js, ui.scrollbarWidget.js, ui.scalableSet.js, ui.scalable.js, ui.buttonSet.js, ui.complexityBlock.js, ui.monthCalendar.js, ui.tabs.js, init.js]
+registration3Success:
+  javascripts: [jquery-1.4.3.js, jquery-ui.js, jquery.ui.slider.js, publisher.js, subscriber.js, ui.formBase.js, ui.formWidgetBase.js, ui.widgetBlock.js, ui.scrollbarWidget.js, ui.scalableSet.js, ui.scalable.js, ui.buttonSet.js, ui.complexityBlock.js, ui.monthCalendar.js, ui.tabs.js, init.js]

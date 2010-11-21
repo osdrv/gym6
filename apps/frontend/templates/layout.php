@@ -4,26 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Gym6</title>
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
-
-        <script type="text/javascript" src="/js/jquery-1.4.3.js"></script>
-        <script type="text/javascript" src="/js/jquery-ui.js"></script>
-        <script type="text/javascript" src="/js/jquery.ui.slider.js"></script>
-
-        <script type="text/javascript" src="/js/publisher.js"></script>
-        <script type="text/javascript" src="/js/subscriber.js"></script>
-        <script type="text/javascript" src="/js/ui.formBase.js"></script>
-        <script type="text/javascript" src="/js/ui.formWidgetBase.js"></script>
-        <script type="text/javascript" src="/js/ui.widgetBlock.js"></script>
-        <script type="text/javascript" src="/js/ui.scrollbarWidget.js"></script>
-        <script type="text/javascript" src="/js/ui.scalableSet.js"></script>
-        <script type="text/javascript" src="/js/ui.scalable.js"></script>
-        <script type="text/javascript" src="/js/ui.buttonSet.js"></script>
-        <script type="text/javascript" src="/js/ui.complexityBlock.js"></script>
-        <script type="text/javascript" src="/js/ui.monthCalendar.js"></script>
-        <script type="text/javascript" src="/js/ui.tabs.js"></script>
-
-        <script type="text/javascript" src="/js/init.js"></script>
-
+<?php include_javascripts() ?>
     </head>
     <body>
         <div id="page">
