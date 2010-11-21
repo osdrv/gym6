@@ -20,11 +20,11 @@
                         <div class="weeks" id="month-date-selector">
                             <div class="month">
                                 <h3><?php echo $n_o_month?></h3>
-                                <?php $mv=0; foreach($mdays as $mweeks) {?>
-                                <?php $c = ($mv?($mv==5?'pink':($mv==6?'pink last':'')):'first'); $mv++;?>
-                                <div class="<?php echo $c ?>" day="<?php echo $mv?>">
+                                <?php $mv=0; foreach($mdays as $mweeks) {
+                                      $c = ($mv?($mv==5?'pink':($mv==6?'pink last':'')):'first'); $mv++;?>
+                                <div class="<?php echo $c ?>" day="<?php echo $mv==7?0:$mv?>">
                                 <?php foreach($mweeks as $mdays) {?>
-                                <a href="#" title="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
+                                <a href="#" date="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
                                 <?php } ?>
                                 </div>
                                 <?php } ?>
@@ -33,32 +33,12 @@
                                 <h3><?php echo $n_o_month1 ?></h3>
                                 <?php $mv=0; foreach($mdays1 as $mweeks) {?>
                                 <?php $c = ($mv?($mv==5?'pink':($mv==6?'pink last':'')):'first'); $mv++;?>
-                                <div class="<?php echo $c ?>" day="<?php echo $mv?>">
+                                <div class="<?php echo $c ?>" day="<?php echo $mv==7?0:$mv?>">
                                 <?php foreach($mweeks as $mdays) {?>
-                                <a href="#" title="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
+                                <a href="#" date="<?php echo $mdays['date'] ?>"><?php echo $mdays['view'] ?></a>
                                 <?php } ?>
                                 </div>
                                 <?php } ?>
-                            </div>
-                            <div class="month">
-                                <h3>October</h3>
-                                <div class="first" day="1"><a href="#" date="2010.09.27">27</a><a href="#" date="2010.10.04">4</a><a href="#" date="2010.10.11">11</a><a href="#" date="2010.10.18">18</a><a href="#" date="2010.10.25">25</a></div>
-                                <div day="2"><a href="#" date="2010.09.28">28</a><a href="#" date="2010.10.05">5</a><a href="#" date="2010.10.12">12</a><a href="#" date="2010.10.19">19</a><a href="#" date="2010.10.26">26</a></div>
-                                <div day="3"><a href="#" date="2010.09.29">29</a><a href="#" date="2010.10.06">6</a><a href="#" date="2010.10.13">13</a><a href="#" date="2010.10.20">20</a><a href="#" date="2010.10.27">27</a></div>
-                                <div day="4"><a href="#" date="2010.09.30">30</a><a href="#" date="2010.10.07">7</a><a href="#" date="2010.10.14">14</a><a href="#" date="2010.10.21">21</a><a href="#" date="2010.10.28">28</a></div>
-                                <div day="5"><a href="#" date="2010.10.01">1</a><a href="#" date="2010.10.08">8</a><a href="#" date="2010.10.15">15</a><a href="#" date="2010.10.22">22</a><a href="#" date="2010.10.29">29</a></div>
-                                <div class="pink" day="6"><a href="#" date="2010.10.02">2</a><a href="#" date="2010.10.09">9</a><a href="#" date="2010.10.16">16</a><a href="#" date="2010.10.23">23</a><a href="#" date="2010.10.30">30</a></div>
-                                <div class="pink last" day="0"><a href="#" date="2010.10.03">3</a><a href="#" date="2010.10.10">10</a><a href="#" date="2010.10.17">17</a><a href="#" date="2010.10.24">24</a><a href="#" date="2010.10.31">31</a></div>
-                            </div>
-                             <div class="month">
-                                <h3>November</h3>
-                                <div class="first" day="1"><a href="#" date="2010.11.01">1</a><a href="#" date="2010.11.08">8</a><a href="#" date="2010.11.15">15</a><a href="#" date="2010.11.22">22</a><a href="#" date="2010.11.29">29</a></div>
-                                <div day="2"><a href="#" date="2010.11.02">2</a><a href="#" date="2010.11.09">9</a><a href="#" date="2010.11.16">16</a><a href="#" date="2010.11.23">23</a><a href="#" date="2010.11.30">30</a></div>
-                                <div day="3"><a href="#" date="2010.11.03">3</a><a href="#" date="2010.11.10">10</a><a href="#" date="2010.11.17">17</a><a href="#" date="2010.11.24">24</a><a href="#" date="2010.12.01">1</a></div>
-                                <div day="4"><a href="#" date="2010.11.04">4</a><a href="#" date="2010.11.11">11</a><a href="#" date="2010.11.18">18</a><a href="#" date="2010.11.25">25</a><a href="#" date="2010.12.02">2</a></div>
-                                <div day="5"><a href="#" date="2010.11.05">5</a><a href="#" date="2010.11.12">12</a><a href="#" date="2010.11.19">19</a><a href="#" date="2010.11.26">26</a><a href="#" date="2010.12.03">3</a></div>
-                                <div class="pink" day="6"><a href="#" date="2010.11.06">6</a><a href="#" date="2010.11.13">13</a><a href="#" date="2010.11.20">20</a><a href="#" date="2010.11.27">27</a><a href="#" date="2010.12.04">4</a></div>
-                                <div class="pink last" day="0"><a href="#" date="2010.11.07">7</a><a href="#" date="2010.11.14">14</a><a href="#" date="2010.11.21">21</a><a href="#" date="2010.11.28">28</a><a href="#" date="2010.12.05">5</a></div>
                             </div>
                         </div>
                         <input type="hidden" name="data[dates]" id="data_dates" value=""/>
