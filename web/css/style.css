@@ -118,10 +118,11 @@ a {color:#2a5782;}
 .reg1 .next_step {background:url(../img/step1.png); width:277px; height:50px; display:block; margin:20px 0 30px;}
 
 
-				.reg2 .tab {height:50px; background:url(../img/tab.png); position:absolute; margin-top:-50px; width:962px;}
-				.reg2 .tab .s {position:absolute; font-size:22px; color:#7a7a7a; text-decoration:none; text-transform:uppercase; top:10px; left:323px; font-weight:normal;}
-				.reg2 .tab .a {position:absolute; font-size:22px; color:#5a5a5a; text-decoration:none; text-transform:uppercase; top:10px; left:425px; font-weight:normal;}
-				.reg2 .select_simple {background-position:bottom left;} .reg2 .select_simple .a {color:#7a7a7a;} .reg2 .select_simple .s {color:#5a5a5a;}
+.reg2 .tabs {position:absolute; left:315px; top:207px;}
+.reg2 .tabs a {background:url(../img/tab.png) bottom left; font-size:22px; 
+				color:#7a7a7a; text-decoration:none; text-transform:uppercase; line-height:42px; display:inline-block; position:relative; margin-right:15px; padding-left:10px;}
+.reg2 .tabs a i {background:url(../img/tab.png) bottom right; width:10px; height:42px; position:absolute; right:-10px; top:0px;}
+	.reg2 .tabs a.active {background-position:top left;} .reg2 .tabs a.active i {background-position:top right;}
 				
 				.reg2 h2 {font-size:22px; font-weight:normal; color:#153448; padding:15px 0;}
 				
