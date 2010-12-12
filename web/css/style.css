@@ -118,10 +118,11 @@ a {color:#2a5782;}
 .reg1 .next_step {background:url(../img/step1.png); width:277px; height:50px; display:block; margin:20px 0 30px;}
 
 
-				.reg2 .tab {height:50px; background:url(../img/tab.png); position:absolute; margin-top:-50px; width:962px;}
-				.reg2 .tab .s {position:absolute; font-size:22px; color:#7a7a7a; text-decoration:none; text-transform:uppercase; top:10px; left:323px; font-weight:normal;}
-				.reg2 .tab .a {position:absolute; font-size:22px; color:#5a5a5a; text-decoration:none; text-transform:uppercase; top:10px; left:425px; font-weight:normal;}
-				.reg2 .select_simple {background-position:bottom left;} .reg2 .select_simple .a {color:#7a7a7a;} .reg2 .select_simple .s {color:#5a5a5a;}
+.reg2 .tabs {position:absolute; left:315px; top:207px;}
+.reg2 .tabs a {background:url(../img/tab.png) bottom left; font-size:22px; 
+				color:#7a7a7a; text-decoration:none; text-transform:uppercase; line-height:42px; display:inline-block; position:relative; margin-right:15px; padding-left:10px;}
+.reg2 .tabs a i {background:url(../img/tab.png) bottom right; width:10px; height:42px; position:absolute; right:-10px; top:0px;}
+	.reg2 .tabs a.active {background-position:top left;} .reg2 .tabs a.active i {background-position:top right;}
 				
 				.reg2 h2 {font-size:22px; font-weight:normal; color:#153448; padding:15px 0;}
 				
@@ -181,13 +182,30 @@ a {color:#2a5782;}
 				.reg_setting .slider {width:340px; margin:0 0 35px;}
 				.reg_setting .slider span {position:absolute; width:100px; text-align:right; left:-110px; top:-12px; font-size:16px;}
 				.reg_setting .men {width:64px; height:208px; background:url(../img/men.png); position:absolute; top:65px; left:130px;}
-				
-				.men i {position:absolute; background:url(../img/men.png);}
-				.reg_setting .s1 {top:66px; left:13px; background-position: -100px 0; width:40px; height:40px;}
-				.reg_setting .s2 {top:40px; left:0px; background-position: -100px -50px; width:65px; height:80px;}
-				.reg_setting .s3 {top:99px; left:-1px; background-position: -100px -140px; width:55px; height:110px;}
-				.reg_setting .s4 {top:0px; left:-2px; background-position: -180px -40px; width:66px; height:208px;}
-				.reg_setting .s5 {top:102px; left:12px; background-position: -200px 0; width:40px; height:30px;}
+          .men i {position:absolute; background:url(../img/men.png);}
+        	.reg_setting .s1 {top:66px; left:13px; background-position: -100px 0; width:40px; height:40px;}
+        	.reg_setting .s2 {top:40px; left:0px; background-position: -100px -50px; width:65px; height:80px;}
+        	.reg_setting .s3 {top:99px; left:-1px; background-position: -100px -140px; width:55px; height:110px;}
+        	.reg_setting .s4 {top:0px; left:-2px; background-position: -180px -40px; width:66px; height:208px;}
+        	.reg_setting .s5 {top:102px; left:12px; background-position: -200px 0; width:40px; height:30px;}
+
+
+        .reg_setting .women {width:64px; height:208px; background:url(../img/women.png); position:absolute; top:65px; left:130px;}				
+        	.women i {position:absolute; background:url(../img/women.png);}
+        	.reg_setting .women .s1 {top:55px; left:13px; background-position: -100px 0; width:40px; height:40px;}
+        	.reg_setting .women .s2 {top:40px; left:0px; background-position: -100px -50px; width:65px; height:80px;}
+        	.reg_setting .women .s3 {top:95px; left:-1px; background-position: -100px -140px; width:55px; height:115px;}
+        	.reg_setting .women .s4 {top:0px; left:-2px; background-position: -180px -47px; width:66px; height:208px;}
+        	.reg_setting .women .s5 {top:98px; left:11px; background-position: -200px 0; width:40px; height:45px;}
+
+
+        .reg_setting .alien {width:168px; height:215px; background:url(../img/alien.png); position:absolute; top:65px; left:50px;}				
+        	.alien i {position:absolute; background:url(../img/alien.png);}
+        	.reg_setting .alien .s1 {top:92px; left:54px; background-position: -236px 0; width:70px; height:40px;}
+        	.reg_setting .alien .s2 {top:61px; left:-1px; background-position: -188px -60px; width:180px; height:55px;}
+        	.reg_setting .alien .s3 {top:154px; left:27px; background-position:-220px -141px; width:125px; height:65px;}
+        	.reg_setting .alien .s4 {top:-1px; left:-1px; background-position: -361px -55px; width:170px; height:220px;}
+        	.reg_setting .alien .s5 {top:127px; left:38px; background-position: -388px -8px; width:100px; height:35px;}
 				
 				.sip {background:url(../img/sip.png); width:237px; height:50px; display:block; margin-left:320px}
 				.sip:hover {background-position:center center;}
