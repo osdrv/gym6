@@ -4,30 +4,41 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Gym6</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-        <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/js/jquery-ui-1.8.5.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				
-				// Slider
 				$('.slider').slider({value:50});
-				
-		
+				$(".switch_gender a").click(function () {$(this).addClass('active').siblings().removeClass('active'); $(".figure").removeClass('men women alien').addClass($(this).attr('switch')); return false});	
 			});
 		</script>
 	</head>	
 	<body>
+        
+        
+        
 		<div id="page">
         <h1 class="logo_new">GUM6<a href="#"></a></h1>
         <div class="sign"><a href="#">Nastia Larkina</a>|<a href="#">Logout</a></div>
+       	<ul class="menu">
+        	<li><a href="#">Workout</a></li>
+            <li class="sub"><a href="#">Settings</a><ul><li><a href="#">Simple</a></li><li><a href="#" style="text-decoration:none;">Advanced</a></li></ul></li>
+            <li><a href="#">Progress</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
         <img src="img/temp/a2.jpg" />
         
         	<div class="reg2">
-        		<div class="tab select_advanced"><a href="#" class="s">Simple</a><strong class="a">Advanced</strong></div>  	
-
             <div class="reg_date">
-            	<h2>Set your schedule <a href="#" class="q"></a></h2>
+            	<h2>Set your schedule 
+                    <a href="#" class="q"><span>
+                         Тут будет пояснение о том, как работает календарь.
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed dui quis sem commodo accumsan. Integer sed risus nibh. Maecenas quis ipsum eu ligula posuere volutpat non et est. Praesent laoreet libero sed odio blandit convallis. Proin ut dolor a velit volutpat pretium.
+                         <i></i>
+                    </span></a>
+                </h2>
                 <div class="days"><a href="#" class="first select">Mon</a><a href="#">Tu</a><a href="#">Wed</a><a href="#" class="select">Thu</a><a href="#">Fri</a><a href="#" class="pink">Sat</a><a href="#" class="last pink">Sun</a></div>
+               
                 <div class="weeks">          
                     <div class="month">
                         <h3>October</h3>
@@ -71,20 +82,21 @@
                 </div>
                 
                 <div class="reg_setting">
-                <div class="men">
-                	<i class="s1" style="opacity:0.4;"></i>
-                    <i class="s2" style="opacity:0.7;"></i>
-                    <i class="s3" style="opacity:0.3;"></i>
-                    <i class="s4" style="opacity:0.8;"></i>
-                    <i class="s5" style="opacity:1;"></i>
-                </div>
+                    <div class="men figure">
+                        <i class="s1" style="opacity:0.4;"></i>
+                        <i class="s2" style="opacity:0.7;"></i>
+                        <i class="s3" style="opacity:0.3;"></i>
+                        <i class="s4" style="opacity:0.8;"></i>
+                        <i class="s5" style="opacity:1;"></i>
+                    </div>
                 	<h2>Настрой-ка</h2>
                     <div style="width:340px; padding-bottom:5px;"><span style="float:right">max</span>min</div>
-                    <div class="slider"><span>Arms</span></div>
-                    <div class="slider"><span>Prelum</span></div>
-                    <div class="slider"><span>Legs</span></div>
-                    <div class="slider"><span>Flexibility</span></div>
-                    <div class="slider"><span>Buttocks</span></div> 
+                    <div class="slider"><span style="font-size:22px;">Arms</span></div>
+                    <div class="slider"><span style="font-size:18px;">Prelum</span></div>
+                    <div class="slider"><span style="font-size:16px;">Legs</span></div>
+                    <div class="slider"><span style="font-size:22px;">Flexibility</span></div>
+                    <div class="slider"><span style="font-size:20px;">Buttocks</span></div> 
+                    <div class="switch_gender"><a href="#" class="sg1 active" switch="men">Male</a><a href="#" class="sg2" switch="women">Female</a><a href="#" class="sg3" switch="alien">Alien</a></div>
                 </div>
                 
                 <a href="#" class="sip"></a>

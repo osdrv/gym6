@@ -44,6 +44,7 @@
 </div>
 <?php endif ?>
 <div class="content">
+<br><br><br><br><br><br>
 <?php echo $sf_content ?>
 </div>
 </div>
