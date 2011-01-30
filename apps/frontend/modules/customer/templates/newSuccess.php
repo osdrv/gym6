@@ -1,7 +1,7 @@
-<!--   <h1>New Customer</h1>
+<h1>New Customer</h1>
 
 <?php include_partial('form', array('form' => $form)) ?>
--->
+
             <img src="/img/temp/a.jpg" />
             <div class="reg1">
                 <img src="/img/free.png" />

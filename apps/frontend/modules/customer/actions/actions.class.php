@@ -31,7 +31,7 @@ class customerActions extends sfActions
   public function executeRegistration2(sfWebRequest $request)
   {
     $this->mdays=array();
-    $n = mktime(0,0,1,11,1,2015);
+    $n = time();
     $s_o_m = mktime(0,0,1,date('m',$n),1,date('Y',$n)); //start of month Первое число текущего месяца
     $e_o_m = date('z',$s_o_m+date("t",$s_o_m)*3600*24); //end of month Первое число текущего месяца
     $d_o_1st = date('N',$s_o_m); //(1-7) День недели первого числа месяца
@@ -42,21 +42,6 @@ class customerActions extends sfActions
     $d_o_y = $d_o_y - 7;
     $this->mdays1 = $this->generateCalendar($d_o_y,null,4);
     $this->n_o_month1 = date("F",date('m',$n)<12?mktime(0,0,1,date('m',$n)+1,1,date('Y',$n)):mktime(0,0,1,1,1,date('Y',$n)+1));
-  }
-
-  public function executeRegistration3(sfWebRequest $request)//Только чтобы показать ошибки в верстке
-  {
-    $this->mdays=array();
-    $n = mktime(0,0,1,11,1,2015);
-    $s_o_m = mktime(0,0,1,date('m',$n),1,date('Y',$n)); //start of month Первое число текущего месяца
-    $e_o_m = date('z',$s_o_m+date("t",$s_o_m)*3600*24); //end of month Первое число текущего месяца
-    $d_o_1st = date('N',$s_o_m); //(1-7) День недели первого числа месяца
-    $d_o_y = date('z',$s_o_m) - $d_o_1st + 1; //День в году, с которого оторого начинаме календарь
-    $this->mdays = $this->generateCalendar($d_o_y, $e_o_m, 6);
-    $this->n_o_month = date("F",$s_o_m);
-    $this->mdays1 = $this->generateCalendar($d_o_y,null,6);
-    $this->n_o_month1 = date("F",date('m',$n)<12?mktime(0,0,1,date('m',$n)+1,1,date('Y',$n)):mktime(0,0,1,1,1,date('Y',$n)+1));
-    $this->setTemplate('registration2');
   }
 
   public function executePay(sfWebRequest $request)
