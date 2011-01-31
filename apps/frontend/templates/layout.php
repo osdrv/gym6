@@ -31,7 +31,7 @@
                             <input type="submit" value="" class="sign_in" />
                             <div class="memory">
                                 <label><input type="checkbox" /> Stay signed in</label><br />
-                                <a href="#">Forgot password?</a>
+                                <a href="<?php echo url_for('/customer/forgotpass') ?>">Forgot password?</a>
                             </div>
                         </div>
                 </div>

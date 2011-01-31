@@ -10,10 +10,10 @@ a {color:#2a5782;}
 .logo {float:left; width:100px; height:47px; overflow:hidden; position:relative;} 
 .logo a {background:url(../img/logo.png); width:100px; height:47px; position:absolute; top:0px; left:0px;}
 
-.sign {float:right; margin:11px 0; font-size:12px; color:#c4beb0;} .sign a {margin:0 10px; position:relative; z-index:11;} .sign  .fb {display:inline; position:relative; top:5px;}
+.sign {float:right; margin:11px 0; font-size:12px; color:#c4beb0;} .sign a {margin:0 12px 0 8px; position:relative; z-index:11;} .sign  .fb {display:inline; position:relative; top:5px;}
 
 .sign_popup {position:absolute; background:url(../img/sign.png); width:201px; z-index:10; padding:45px 16px 0; font-size:12px; right:10px; top:5px;}
-.sign_popup .error {color:#fff; background:#ff7178; padding:5px; line-height:16px;} .sign_popup .error a {color:#fff;}
+.sign_popup .error {color:#fff; background:#ff7178; padding:5px; line-height:16px; white-space:nowrap;} .sign_popup .error a {color:#fff;}
 .sign_popup strong {color:#544b3e; display:block;}
 .sign_popup .text {border:1px solid #dddddc; padding:3px; width:192px;}
 .sign_popup .error_text {border:2px solid #ff878d; padding:2px;}
@@ -104,6 +104,9 @@ a {color:#2a5782;}
 .logo_new {position:absolute; overflow:hidden; width:145px; height:102px; text-indent:-200px; top:0px; left:15px; z-index:100;}
 .logo_new a {background:url(../img/logo.png); width:145px; height:102px; position:absolute; top:0px; left:0px;}
 * html .logo_new a {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src=img/logo.png);}
+
+.logo_no_inking {position:absolute; overflow:hidden; width:145px; height:102px; text-indent:-200px; top:0px; left:15px; z-index:100;}
+.logo_no_inking a {background:url(../img/logo_no_inking.png); width:145px; height:102px; position:absolute; top:0px; left:0px;}
 
 .reg1 {width:383px; margin:0 auto; position:relative; color:#544b3e;}
 .reg1 img {position:absolute; z-index:5; left:-226px; top:14px;}
@@ -248,7 +251,7 @@ a {color:#2a5782;}
 .reg3 .next_step:hover {background-position:center center;} .reg3 .next_step:focus {background-position:top center;} 
 
 
-.menu {position:absolute; top:10px; left:240px;}
+.menu {position:absolute; top:10px; left:270px; text-transform:uppercase;}
 .menu li {margin-right:5px; padding-left:20px; float:left; list-style:none; position:relative; font-size:16px; color:#153448;}
 .menu li a {padding-right:25px; display:inline-block;}
 .menu ul {position:absolute; display:none;}
@@ -292,3 +295,52 @@ a {color:#2a5782;}
 .ui-slider .ui-slider-handle  {background:url(../img/s1.png); width:68px; height:19px; margin-left:-34px; top:-8px; outline:none;}
 
 
+
+
+
+
+
+.reg4 {padding-left:320px;}
+.reg4 h1 {font:normal 32px/50px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#153448;}
+.reg4 p {margin-top:1em; font-size:14px; line-height:20px;}
+			
+.ready {background:url(../img/ready.png); width:285px; height:50px; display:block;}
+.ready:hover {background-position:center center;}
+.ready:focus {background-position:bottom left;}
+
+.pay {position:relative; height:130px; padding-top:25px;}
+.pay .cupon {position:absolute; left:-210px; top:45px; z-index:10;}
+.pay .cupon h4 {font-weight:normal; font-size:14px; color:#5a5a5a;}
+.pay .cupon input {width:150px; padding:4px; border:1px solid #ddd; margin-top:5px;}
+.pay .cupon .q {background:url(../img/reg_q.png); width:17px; height:17px; line-height:7px; font-size:7px; display:inline-block; position:relative; text-decoration:none;}
+.pay .cupon .q span {position:absolute; background:url(../img/helper.png); width:181px; padding:10px 10px 0 25px; font-size:12px; line-height:14px; color:#000; text-decoration:none; top:-20px; left:20px; display:none;}
+.pay .cupon .q:hover span {display:block;}
+.pay .cupon .q span i {position:absolute; bottom:-10px; left:0px; background:url(../img/helper.png) bottom left; width:216px; height:10px;}
+
+.pay .price {position:relative; float:left;}
+.pay .price .current {font-size:114px; line-height:120px; color:#8d8d8d;} .pay .price .current span {font-size:63px;}
+
+.pay .discount {background:url(../img/discount.png); width:137px; height:113px; position:absolute; right:-150px; top:35px;}
+.pay .discount .old {font-size:27px; padding:18px 0 8px 20px; text-align:center; color:#8d8d8d; position:relative;} .pay .discount .old span {font-size:15px;} 
+.pay .discount .old i {background:url(../img/old.png); width:58px; height:13px; position:absolute; left:37%; top:25px;}
+.pay .discount .saving {color:#f00; font-size:29px; font-weight:normal; display:block; text-align:center; padding-left:15px;}
+  
+ .method_of_payment {height:60px;}
+ .method_of_payment label {width:100px; height:50px; float:left; width:100px; height:50px; float:left; margin:0 20px; position:relative;}
+ .method_of_payment input {position:absolute; top:20px; left:-15px;}
+ .method_of_payment .google {background:url(../img/method_of_payment.png);}
+ .method_of_payment .paypal {background:url(../img/method_of_payment.png) 0 -50px;}
+ 
+ 
+.about_page {height:595px; background:url(../img/about.jpg); margin-top:50px; clear:both; padding-left:110px;}
+.about_page cite {color:#544b3e; font-size:22px; width:380px; font-style:normal; display:block; padding:100px 0 40px;}
+.about_page p {width:415px; padding-bottom:8px; color:#544b3e; line-height:18px;}
+
+.about_page .ap1, .about_page .ap2 {position:absolute;} 
+.about_page .ap1 a, .about_page .ap2 a {font-size:22px;}
+.about_page .ap1 {bottom:50px; left:190px;}
+.about_page .ap2 {bottom:30px; left:600px;}
+
+.about_page .spp {background:url(../img/spp.png); width:266px; height:60px; display:block; margin-top:20px;}
+.about_page .spp:hover {background-position:center center;}
+.about_page .spp:focus {background-position:bottom left;}

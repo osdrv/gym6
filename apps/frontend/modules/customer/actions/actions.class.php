@@ -58,6 +58,11 @@ class customerActions extends sfActions
   {
   }
 
+  public function executeForgotpass(sfWebRequest $request)
+  {
+  }
+
+
   public function executeIndex(sfWebRequest $request)
   {
     $this->customers = Doctrine::getTable('customer')
