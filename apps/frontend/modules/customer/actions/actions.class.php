@@ -30,12 +30,22 @@ class customerActions extends sfActions
   }
   public function executeRegistration2(sfWebRequest $request)
   {
+    $this->form = new Step2RegistrationForm();
+  }
+
+  public function executeRegistration4(sfWebRequest $request)
+  {
+    $this->form = new Step4RegistrationForm();
+  }
+
+  public function executeRegistration3(sfWebRequest $request)
+  {
     $this->mdays=array();
     $n = time();
     $s_o_m = mktime(0,0,1,date('m',$n),1,date('Y',$n)); //start of month Первое число текущего месяца
     $e_o_m = date('z',$s_o_m+date("t",$s_o_m)*3600*24); //end of month Первое число текущего месяца
     $d_o_1st = date('N',$s_o_m); //(1-7) День недели первого числа месяца
-    $d_o_y = date('z',$s_o_m) - $d_o_1st + 1; //День в году, с которого оторого начинаме календарь
+    $d_o_y = date('z',$s_o_m) - $d_o_1st + 1; //День в году, с которого оторого начинаем календарь
     $this->mdays = $this->generateCalendar($d_o_y, $e_o_m, 4);
     $this->n_o_month = date("F",$s_o_m);
     //if((date("t",$s_o_m)+$d_o_1st-1)>=28)  
@@ -63,7 +73,7 @@ class customerActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new customerForm();
+    $this->form = new Step1RegistrationForm();
   }
 
   public function executeCreate(sfWebRequest $request)
