@@ -38,7 +38,7 @@
         <?php endif; ?>
             <h1 class="logo_new">GYM6<a href="/"></a></h1>
             <?php if(1):?>
-            <div class="sign"><a href="<?php echo url_for('/customer/new') ?>">Sign Up</a>|<a href="#">Sign In</a> <div class="fb"><img src="/img/temp/fb.png" /></div></div>
+            <div class="sign"><a href="<?php echo url_for('/customer/new') ?>">Sign Up</a>|<a href="#">Sign In</a> <!-- <div class="fb"><img src="/img/temp/fb.png" /></div> --> </div>
             <?php else:?>
             <div class="sign"><a href="#">Nastia Larkina</a>|<a href="#">Logout</a></div>
             <?php endif;?>
