@@ -91,17 +91,20 @@
 
             <div class="reg3">
                 <h2 class="join_now">Join now</h2>
+                <?php echo $form->renderGlobalErrors() ?>
+                <form action="<?php echo url_for('customer/new') ?>" method="post" name="registration">
                 <div class="login" style="display:none;"><img id='fbavatar' src="/img/temp/av.jpg" /> You have connected via Facebook as <h2><p id="userName"></p></h2></div>
                 <div class="no_login">
-                    <form action="<?php echo url_for('@sf_guard_register') ?>" method="post">
-                    <label><span>User name</span><?php echo $form['name']->render() ?></label>
-                    <label><span>Password</span><?php echo $form['password']->render() ?><!-- <span class="error">Enter password</span></label>-->
-                    <label><span>Password</span><?php echo $form['password_again']->render() ?></label>
-                    </form>
+                    
+                    <label><span>User name</span><?php echo $form['name']->render() ?><?php echo include_partial('error',array('wdgt' => $form['name']));?></label>
+                    <label><span>Password</span><?php echo $form['password']->render() ?><?php echo include_partial('error',array('wdgt' => $form['password']));?></label>
+                    <label><span>Password</span><?php echo $form['password_again']->render() ?><?php echo include_partial('error',array('wdgt' => $form['password_again']));?></label>
+                    
                     <div class="or">or <div class="fb"><img src="/img/temp/fb.png" /></div></div> 
                 </div>
-                <label class="checkbox"><?php echo $form['agreement']->render() ?>I agree to the <a href="#">Terms of Service</a></label>
-                <label class="checkbox"><?php echo $form['not_ill']->render() ?><a href="#">Я не больной и не беременный</a></label>
-                <a href="<?php echo url_for('customer/registration2') ?>" class="next_step"></a>
+                <label class="checkbox"><?php echo $form['agreement']->render() ?>I agree to the <a href="#">Terms of Service</a><?php echo include_partial('error',array('wdgt' => $form['agreement']));?></label>
+                <label class="checkbox"><?php echo $form['not_ill']->render() ?><a href="#">Я не больной и не беременный</a><?php echo include_partial('error',array('wdgt' => $form['not_ill']));?></label>
+                <a href="#" class="next_step" onclick="document.registration.submit();"></a>
+                </form>
             </div>
         </div>

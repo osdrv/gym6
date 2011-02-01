@@ -79,6 +79,19 @@ class customerActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Step1RegistrationForm();
+ 
+    if ($request->isMethod('post'))
+    {
+      $this->form->bind($request->getParameter('registration'));
+      if ($this->form->isValid())
+      {
+        $this->redirect('customer/registration2?'.http_build_query($this->form->getValues()));
+      }
+      else
+      {
+
+      }
+    }
   }
 
   public function executeCreate(sfWebRequest $request)
