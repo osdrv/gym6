@@ -1,6 +1,9 @@
         <img src="/img/temp/a.jpg" style="padding-top:3px;" />
             <div class="reg1">
                 <img src="/img/free!.png" />
+                <!-- <?php echo $form->renderGlobalErrors() ?>-->
+                <form action="<?php echo url_for('customer/registration2') ?>" method="post" name="registration">
+                <?php echo $form['_csrf_token']; ?>
                 <dl>
                     <dt><label><input type="checkbox" checked="checked" /> Reminder Service</label></dt>
                     <dd>
@@ -25,6 +28,7 @@
                         </a>
                     </dd>
                 </dl>
-                <a href="<?php echo url_for('customer/registration3') ?>" class="next_step"></a>         
+                </form>
+                <a href="#" class="next_step" onclick="document.registration.submit();"></a>
             </div>
         </div>  

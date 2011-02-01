@@ -7,7 +7,7 @@ class Step1RegistrationForm  extends BaseRegistrationForm
       'name' => new sfWidgetFormInputText(),
       'password' => new sfWidgetFormInputPassword(),
       'password_again' => new sfWidgetFormInputPassword(),
-      'agreement' => new sfWidgetFormInputCheckbox(array('value_attribute_value'=>1)),
+      'agreement' => new sfWidgetFormInputCheckbox(),
       'not_ill' => new sfWidgetFormInputCheckbox(),
       ));
     $this->widgetSchema->setNameFormat('registration[%s]');
@@ -15,8 +15,11 @@ class Step1RegistrationForm  extends BaseRegistrationForm
       'name'    => new sfValidatorString(array('max_length' => 50)),
       'password' => new sfValidatorString(array('max_length' => 50)),
       'password_again' => new sfValidatorString(array('max_length' => 50)),
-      'agreement' => new sfValidatorBoolean(),
+      'agreement' => new sfValidatorBoolean(array('required' => true)),
+      'not_ill' => new sfValidatorBoolean(array('required' => true)),
     ));
-    $this->validatorSchema->setPostValidator(new sfValidatorSchemaCompare('password', '==', 'password_again'));
+    $this->validatorSchema->setPostValidator(new sfValidatorSchemaCompare('password', '==', 'password_again',
+    array(),
+    array('invalid' => 'Passwords must be same')));
   }
 }

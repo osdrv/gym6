@@ -22,4 +22,8 @@ class demoActions extends sfActions
   public function executeFaq(sfWebRequest $request)
   {
   }
+  public function executeAbout(sfWebRequest $request)
+  {
+  }
+
 }

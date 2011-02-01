@@ -91,14 +91,15 @@
 
             <div class="reg3">
                 <h2 class="join_now">Join now</h2>
-                <?php echo $form->renderGlobalErrors() ?>
+                <!-- <?php echo $form->renderGlobalErrors() ?>-->
                 <form action="<?php echo url_for('customer/new') ?>" method="post" name="registration">
+                <?php echo $form['_csrf_token']; ?>
                 <div class="login" style="display:none;"><img id='fbavatar' src="/img/temp/av.jpg" /> You have connected via Facebook as <h2><p id="userName"></p></h2></div>
                 <div class="no_login">
                     
-                    <label><span>User name</span><?php echo $form['name']->render() ?><?php echo include_partial('error',array('wdgt' => $form['name']));?></label>
-                    <label><span>Password</span><?php echo $form['password']->render() ?><?php echo include_partial('error',array('wdgt' => $form['password']));?></label>
-                    <label><span>Password</span><?php echo $form['password_again']->render() ?><?php echo include_partial('error',array('wdgt' => $form['password_again']));?></label>
+                    <label><span>User name</span><?php echo include_partial('field',array('fld' => $form['name']));?></label>
+                    <label><span>Password</span><?php echo include_partial('field',array('fld' => $form['password']));?></label>
+                    <label><span>Password</span><?php echo include_partial('field',array('fld' => $form['password_again']));?></label>
                     
                     <div class="or">or <div class="fb"><img src="/img/temp/fb.png" /></div></div> 
                 </div>

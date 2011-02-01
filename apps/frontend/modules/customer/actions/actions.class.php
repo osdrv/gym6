@@ -31,6 +31,14 @@ class customerActions extends sfActions
   public function executeRegistration2(sfWebRequest $request)
   {
     $this->form = new Step2RegistrationForm();
+    if ($request->isMethod('post'))
+    {
+      $this->form->bind($request->getParameter('registration'));
+      if ($this->form->isValid())
+      {
+        $this->redirect('customer/registration3?'.http_build_query($this->form->getValues()));
+      }
+    }
   }
 
   public function executeRegistration4(sfWebRequest $request)
@@ -79,17 +87,12 @@ class customerActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Step1RegistrationForm();
- 
     if ($request->isMethod('post'))
     {
       $this->form->bind($request->getParameter('registration'));
       if ($this->form->isValid())
       {
         $this->redirect('customer/registration2?'.http_build_query($this->form->getValues()));
-      }
-      else
-      {
-
       }
     }
   }

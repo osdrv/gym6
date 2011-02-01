@@ -18,6 +18,10 @@ sf_guard_password:
   url:   /requestpassword
   param: { module: sfGuardAuth, action: password }
 
+about:
+  url:   /about
+  param: { module: demo, action: about }
+
 sf_guard_register:
   url:   /register
   param: { module: sfGuardRegister, action: index }

@@ -62,7 +62,7 @@
             <a href="#" class="big_button"></a>
             
             <div class="about">
-                <h2><a href="#">Dan Bennington</a>,</h2>
+                <h2><a href="<?php echo url_for('@about') ?>">Dan Bennington</a>,</h2>
                 <strong>Gym6 founder</strong>
                 <p>The Gym6 name carries over from a goal I had once set for myself to work out "six days a week for six weeks in a row" and it stands for my personal 
                 commitment to providing you with an effective and time-saving personal fitness program with the freedom to choose when and how often you exercise.. </p>
