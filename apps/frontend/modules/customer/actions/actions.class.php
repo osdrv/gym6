@@ -54,11 +54,11 @@ class customerActions extends sfActions
     $e_o_m = date('z',$s_o_m+date("t",$s_o_m)*3600*24); //end of month Первое число текущего месяца
     $d_o_1st = date('N',$s_o_m); //(1-7) День недели первого числа месяца
     $d_o_y = date('z',$s_o_m) - $d_o_1st + 1; //День в году, с которого оторого начинаем календарь
-    $this->mdays = $this->generateCalendar($d_o_y, $e_o_m, 4);
+    $this->mdays = $this->generateCalendar($d_o_y, $e_o_m, 5);
     $this->n_o_month = date("F",$s_o_m);
     //if((date("t",$s_o_m)+$d_o_1st-1)>=28)  
     $d_o_y = $d_o_y - 7;
-    $this->mdays1 = $this->generateCalendar($d_o_y,null,4);
+    $this->mdays1 = $this->generateCalendar($d_o_y,null,5);
     $this->n_o_month1 = date("F",date('m',$n)<12?mktime(0,0,1,date('m',$n)+1,1,date('Y',$n)):mktime(0,0,1,1,1,date('Y',$n)+1));
   }
 
