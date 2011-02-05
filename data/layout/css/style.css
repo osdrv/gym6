@@ -10,9 +10,9 @@ a {color:#2a5782;}
 .logo {float:left; width:100px; height:47px; overflow:hidden; position:relative;} 
 .logo a {background:url(../img/logo.png); width:100px; height:47px; position:absolute; top:0px; left:0px;}
 
-.sign {float:right; margin:11px 0; font-size:12px; color:#c4beb0;} .sign a {margin:0 12px 0 8px; position:relative; z-index:11;} .sign  .fb {display:inline; position:relative; top:5px;}
+.sign {float:right; margin:13px 0; font-size:12px; color:#c4beb0;} .sign a {margin:0 12px 0 8px; position:relative; z-index:11;} .sign  .fb {display:inline; position:relative; top:5px;}
 
-.sign_popup {position:absolute; background:url(../img/sign.png); width:201px; z-index:10; padding:45px 16px 0; font-size:12px; right:10px; top:5px;}
+.sign_popup {position:absolute; background:url(../img/sign.png); width:201px; z-index:10; padding:45px 16px 0; font-size:12px; right:10px; top:8px;}
 .sign_popup .error {color:#fff; background:#ff7178; padding:5px; line-height:16px; white-space:nowrap;} .sign_popup .error a {color:#fff;}
 .sign_popup strong {color:#544b3e; display:block;}
 .sign_popup .text {border:1px solid #dddddc; padding:3px; width:192px;}
@@ -90,7 +90,8 @@ a {color:#2a5782;}
 .form h3 {font-weight:normal; font-size:14px; color:#544b3e;}
 .form .text {font-size:14px; padding:4px; border:1px solid #ddd; width:360px; margin:5px 0 10px;}
 .form textarea {font-size:14px; padding:4px; border:1px solid #ddd; width:360px; height:65px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
-.form .submit {color:#4b5125;  font-family:'MetaNormalCyrLFRoman', sans-serif; font-size-adjust:0.5; font-size:14px; background:url(../img/submit.png); width:47px; height:32px; border:none; outline:none; display:block; margin:8px 0 0 323px;}
+.form .submit {background:url(../img/submit.png); width:47px; height:32px; border:none; outline:none; display:block; margin:8px 0 0 323px;}
+.form .submit:hover {background-position:center center;} .responce_trial .submit:focus {background-position:bottom right;}
 
 
 #footer {font-size:12px; line-height:16px; font:12px/16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#8d8d8d; border-top:1px solid #efefef; margin-top:20px; clear:both;}
@@ -116,14 +117,14 @@ a {color:#2a5782;}
 .reg1 dd label input {width:100%; border:1px solid #ddd; padding:4px; width:360px;}
 .reg1 dd label span {position:absolute; z-index:10; left:-100px; width:90px; text-align:right; font-size:12px;}
 .reg1 dd label input.error {border:2px solid #ff878d; margin:-1px;}
-.reg1 dd label span.error {background:url(../img/error_pointer.png) top left no-repeat #ff7178; height:28px; padding-left:10px; line-height:28px; color:#fff; width:250px; text-align:left; left:375px;}
+.reg1 dd label span.error {background:url(../img/error_pointer.png) top left no-repeat #ff7178; height:28px; padding:0 4px 0 10px; line-height:28px; color:#fff; width:auto; text-align:left; left:375px; white-space:nowrap;}
 .reg1 dd a.twitter, .reg1 dd a.twitter_disabled, .reg1 dd a.facebook, .reg1 dd a.facebook_disabled {background:url(../img/ft_icon.png); width:110px; height:35px; margin-top:5px; display:block; text-decoration:none;}
 .reg1 dd a.twitter {background-position:0 0;}
 .reg1 dd a.twitter_disabled {background-position:0 -35px;}
 .reg1 dd a.facebook {background-position:0 -70px;}
 .reg1 dd a.facebook_disabled {background-position:0 -105px;}
 .reg1 dd a span {position:absolute; background:url(../img/pta.png); width:247px; padding-left:15px; height:28px; line-height:28px; font-size:12px; left:115px; color:#544b3e; margin-top:2px;}
-.reg1 dd a span.error {position:absolute; background:url(../img/error_pointer.png) top left no-repeat #ff7178; padding:4px 0 4px 12px; line-height:16px; font-size:12px; left:115px; color:#544b3e; margin-top:2px; width:465px; height:auto; color:#fff;}
+.reg1 dd a span.error {position:absolute; background:url(../img/error_pointer.png) top left no-repeat #ff7178; padding:4px 4px 4px 12px; line-height:16px; font-size:12px; left:115px; color:#544b3e; margin-top:2px; width:auto; height:auto; color:#fff; white-space:nowrap;}
 .reg1 .next_step {background:url(../img/step1.png); width:163px; height:50px; display:block; margin:20px 0 30px;}
 
 
@@ -243,20 +244,21 @@ a {color:#2a5782;}
 .reg3 .no_login label input {border:1px solid #ddd; padding:4px; width:360px;}
 .reg3 .no_login label span {position:absolute; z-index:10; left:-100px; width:90px; text-align:right; font-size:12px;}
 .reg3 .no_login label input.error {border:2px solid #ff878d; margin:-1px;}
-.reg3 .no_login span.error {background:url(../img/error_pointer.png) top left no-repeat #ff7178; height:28px; padding-left:10px; line-height:28px; color:#fff; width:250px; text-align:left; left:375px;}
+.reg3 .no_login span.error {background:url(../img/error_pointer.png) top left no-repeat #ff7178; height:28px; padding:0 4px 0 10px; line-height:28px; color:#fff; width:auto; text-align:left; left:375px;}
 .reg3 .no_login .or {position:absolute; bottom:-100px; left:300px;}  .reg3 .no_login .or .fb {position:absolute; top:3px; left:20px;}
 
 .reg3 .checkbox {display:block; clear:both;} .reg3 .checkbox input {margin-right:5px;}
+.reg3 .checkbox span.error {background:url(../img/error_pointer.png) top left no-repeat #ff7178; height:28px; padding:0 4px 0 10px; line-height:28px; color:#fff; width:auto; text-align:left; position:absolute; font-size:12px; left:620px;}
 .reg3 .next_step {background:url(../img/step2.png) bottom center; width:286px; height:50px; display:block; margin:20px 0 30px; outline:none;}
 .reg3 .next_step:hover {background-position:center center;} .reg3 .next_step:focus {background-position:top center;} 
 
 
-.menu {position:absolute; top:10px; left:270px; text-transform:uppercase;}
-.menu li {margin-right:5px; padding-left:20px; float:left; list-style:none; position:relative; font-size:16px; color:#153448;}
-.menu li a {padding-right:25px; display:inline-block;}
+.menu {position:absolute; top:12px; left:270px; text-transform:uppercase;}
+.menu li {margin-right:10px; padding-left:20px; float:left; list-style:none; position:relative; font-size:16px; color:#153448;}
+.menu li a {padding-right:20px; display:inline-block; line-height:25px;}
 .menu ul {position:absolute; display:none;}
-.menu .sub {background:url(../img/active_menu.png);}
-.menu .sub a {color:#fff; height:27px; width:55px; display:inline-block; text-decoration:none;}
+.menu .sub {background:url(../img/active_menu.png) top left;}
+.menu .sub a {color:#fff; height:27px; display:inline-block; text-decoration:none; background:url(../img/active_menu.png) top right;}
 .menu .sub ul {display:none;}
 .menu .sub:hover ul {display:block; background:url(../img/active_submenu.png) left bottom no-repeat; width:87px; height:54px; left:-3px; padding:8px 15px;}
 .menu .sub li {padding-left:0px;}
@@ -344,3 +346,54 @@ a {color:#2a5782;}
 .about_page .spp {background:url(../img/spp.png); width:266px; height:60px; display:block; margin-top:20px;}
 .about_page .spp:hover {background-position:center center;}
 .about_page .spp:focus {background-position:bottom left;}
+
+
+.forgot {padding-left:305px;}
+.forgot h2 {font-size:22px; color:#153448; line-height:50px;}
+.forgot p {width:400px; padding-bottom:7px; line-height:19px;}
+.forgot input {width:190px; padding:4px; border:1px solid #ddd;}
+.forgot .send {background:url(../img/forgot.png); height:33px; width:134px; border:none; display:block; margin-top:10px;}
+
+
+
+.work_page {background:url(../img/work_bg.jpg) center 90px no-repeat;}
+.work_page .title {text-align:center; font-size:20px; color:#5a5a5a; font-weight:normal; padding-top:90px;}
+.work_page .inside_flash {width:584px; margin:71px auto 50px; height:330px;}
+.work_page .no_flash {color:#fff; text-align:center; font-size:13px; padding-top:180px;} .no_flash a {color:#fff;}
+
+.work_page .description {width:590px; margin:0 auto; overflow:hidden;}
+.work_page .description img {float:left;}
+.work_page .description .target {width:270px; float:left; text-align:center; border-right:1px solid #f0f0f0; height:90px; margin:10px 0; font-size:20px; line-height:30px;}
+.work_page .description .target strong {display:block; font-size:32px; font-weight:normal; padding-top:15px;}
+.work_page .description .remainder {line-height:90px; font-size:20px; text-indent:30px;} .description .remainder strong {font-size:50px; font-weight:normal; position:relative; left:10px; top:10px;}
+
+.work_page .sell_friend {font-size:18px; color:#5a5a5a; line-height:43px; background:#fcefb6; text-indent:15px; background:url(../img/sell_friend.png); width:642px; margin:30px auto 0; position:relative; clear:both;}
+.work_page .sell_friend strong {font-weight:normal; color:#000;} .sell_friend .close {position:absolute; right:6px; top:12px; height:20px; width:20px;}
+
+
+.end_trial_page {padding:10px 0 10px 310px; overflow:hidden;}
+.end_trial_page p {line-height:20px;}
+.end_trial_page .title {font-size:22px; font-weight:normal;}
+.end_trial_page .sip {margin:20px 0px;}
+
+.end_trial_page .form img {float:left; margin-right:10px;}
+.end_trial_page .form p {position:relative; top:10px;}
+.end_trial_page .form {padding:0px; float:none;}
+
+
+.end_money_page {padding:10px 0 10px 310px; overflow:hidden;}
+.end_money_page p {line-height:20px; padding-bottom:30px;}
+.end_money_page .title {font-size:22px; font-weight:normal;}
+.end_money_page .sip {margin:10px 0px;}
+.end_money_page label {font-size:22px; color:#153448; position:relative;}
+.end_money_page label input {position:absolute; left:-17px; top:7px;}
+.end_money_page ul {padding-bottom:20px;}
+.end_money_page ul li {list-style:none; padding-left:10px; background:url(../img/bull.png) center left no-repeat;}
+
+
+.coach_page {padding-top:50px; overflow:hidden; clear:both; color:#544b3e; }
+.coach_page img {float:left;}
+.coach_page div {width:430px; float:left; padding-left:68px;}
+.coach_page p {line-height:16px; padding-bottom:1em; width:375px;}
+.coach_page .see_all {font-size:22px;}
+.coach_page cite {display:block; width:390px; height:95px; background:url(../img/cite_big.png); margin:20px 0 30px -68px; padding:15px 0 0 68px; font-size:22px; line-height:28px; font-style:normal;}
