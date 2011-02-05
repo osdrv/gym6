@@ -11,7 +11,7 @@
             <div class="texts"><div class="wrap">
                 <div class="column_right">
                     <div class="block c4">
-                        <img src="/img/Valerie_Readfield.jpg" /> <span>Meet <a href="#">Valerie Readfield</a>,<br />your Gym6 fitness coach</span>
+                        <img src="/img/Valerie_Readfield.jpg" /> <span>Meet <a href="<?php echo url_for('/coach') ?>">Valerie Readfield</a>,<br />your Gym6 fitness coach</span>
                     </div>
                     <div class="block c5">
                         <a href="#" class="title">Edward Colson</a>

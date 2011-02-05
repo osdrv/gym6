@@ -16,4 +16,4 @@
                 <input type="text" />
                 <input type="submit" class="send" value="" />
             </div>
-        </div>    
+        </div>
