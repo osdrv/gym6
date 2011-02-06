@@ -2,14 +2,14 @@
             <div class="reg1">
                 <img src="/img/free!.png" />
                 <!-- <?php echo $form->renderGlobalErrors() ?>-->
-                <form action="<?php echo url_for('customer/registration2') ?>" method="post" name="registration">
+                <form action="<?php echo url_for('customer/registration2') ?>" method="post" name="registration2">
                 <?php echo $form['_csrf_token']; ?>
                 <dl>
-                    <dt><label><input type="checkbox" checked="checked" /> Reminder Service</label></dt>
+                    <dt><label><?php echo include_partial('field',array('fld' => $form['reminder']));?> Reminder Service</label></dt>
                     <dd>
                         <p>Reminder service texts you every time you need to exercise and e-mails you if you miss your workouts too often.</p>
-                        <label><span>Email</span><input type="text" class="error" /><span class="error">Enter e-mail</span></label>
-                        <label><span>Phone</span><input type="text" /></label>
+                        <label><span>Email</span><?php echo include_partial('field',array('fld' => $form['email_address']));?></label>
+                        <label><span>Phone</span><?php echo include_partial('field',array('fld' => $form['phone']));?></label>
                     </dd>
                     <dt>Progress in Twitter</dt>
                     <dd>
@@ -19,7 +19,7 @@
                             <span>Press to autentificate</span>
                         </a>
                     </dd>
-                    <dt><label><input type="checkbox" />Post my progress to Facebook</label></dt>
+                    <dt><label><?php echo include_partial('field',array('fld' => $form['post2fb']));?>Post my progress to Facebook</label></dt>
                     <dd>
                         <p>Not more than once a week. Feel free to learn about goodges and badges.</p>
                         <a href="#" class="facebook">
@@ -29,6 +29,6 @@
                     </dd>
                 </dl>
                 </form>
-                <a href="#" class="next_step" onclick="document.registration.submit();"></a>
+                <a href="#" class="next_step" onclick="document.registration2.submit();"></a>
             </div>
         </div>  

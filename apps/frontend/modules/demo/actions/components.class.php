@@ -7,12 +7,12 @@ class demoComponents extends sfGuardAuthComponents
 //    if(!$this->getContext()->getRequest()->isMethod('post'))
      {
         $class = sfConfig::get('app_sf_guard_plugin_signin_form', 'sfGuardFormSignin'); 
-        $this->form = new $class();
+        $this->authform = new $class();
     }
     $request = $this->getContext()->getRequest();
-    if($request->isMethod('post'))
+    if($request->isMethod('post') && $request->getParameter('signin'))
     {
-      $this->form->bind($request->getParameter('signin'));
+      $this->authform->bind($request->getParameter('signin'));
     }
   }
 }

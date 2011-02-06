@@ -31,14 +31,20 @@ class customerActions extends sfActions
   public function executeRegistration2(sfWebRequest $request)
   {
     $this->form = new Step2RegistrationForm();
-    if ($request->isMethod('post'))
+    $user = $this->getUser();
+    if ($request->isMethod('post') && $user->isAuthenticated())
     {
       $this->form->bind($request->getParameter('registration'));
       if ($this->form->isValid())
       {
-        $this->redirect('customer/registration3?'.http_build_query($this->form->getValues()));
+        $u = $user->getGuardUser();
+        $u->setEmailAddress($this->form->getValue('email_address'));
+        $u->save();
+        $this->redirect('customer/registration3');
       }
     }
+    //else
+    //$this->redirect('customer/new');
   }
 
   public function executeRegistration4(sfWebRequest $request)
@@ -92,25 +98,27 @@ class customerActions extends sfActions
       $this->form->bind($request->getParameter('registration'));
       if ($this->form->isValid())
       {
-            $this->form->save();
-            // get the user object
-            $user = $this->form->getObject();
+        $this->form->save();
+        // get the user object
+        $user = $this->form->getObject();
  
             // get the normal user group
-            $normal_user_group = sfConfig::get('app_config_normal_user');
+        $normal_user_group = sfConfig::get('app_config_normal_user');
  
             // deactivate the account, till the user verifies the account
-            //$user->setIsActive(false);
+        //$user->setIsActive(false);
  
             // set the activation token
-            //$profile = $user->getProfile();
-            //$profile->setToken(md5(time()));
+        //$profile = $user->getProfile();
+        //$profile->setToken(md5(time()));
  
             // notify the user about the signup
-            //$this->notifySignup($user, $profile);
-            $user->setEmailAddress($user->getUsername()."@gym6.com");
-            $user->save();
-        $this->redirect('customer/registration2?user_id='.$user->getId());
+        //$this->notifySignup($user, $profile);
+        $user->setEmailAddress($user->getUsername()."@gym6.com");
+        $user->save();
+        $this->getUser()->setAttribute('user_id', $user->getId(), 'sfGuardSecurityUser');
+        $this->getUser()->setAuthenticated(true);
+        $this->redirect('customer/registration2');
       }
     }
   }

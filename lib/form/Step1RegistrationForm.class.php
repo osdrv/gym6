@@ -30,8 +30,16 @@ class Step1RegistrationForm  extends sfGuardUserForm
       'agreement' => new sfValidatorBoolean(array('required' => true)),
       'not_ill' => new sfValidatorBoolean(array('required' => true)),
     ));
-    $this->validatorSchema->setPostValidator(new sfValidatorSchemaCompare('password', '==', 'password_again',
-    array(),
-    array('invalid' => 'Passwords must be same')));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorAnd(array(
+        new sfValidatorSchemaCompare('password', '==', 'password_again',
+            array(),
+            array('invalid' => 'Passwords must be same')),
+        new sfValidatorDoctrineUnique(
+            array('model' => 'sfGuardUser', 'column' => array('username')),
+            array('invalid'=>'Ooops, this user name is not avaible')),
+      ))
+    );
   }
 }
