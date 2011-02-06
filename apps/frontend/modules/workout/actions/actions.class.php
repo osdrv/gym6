@@ -17,7 +17,7 @@ class workoutActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    $this->forward('workout', 'current');
   }
   public function executeCurrent(sfWebRequest $request)
   {

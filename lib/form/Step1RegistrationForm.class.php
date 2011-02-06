@@ -1,10 +1,22 @@
 <?php
-class Step1RegistrationForm  extends BaseRegistrationForm
+class Step1RegistrationForm  extends sfGuardUserForm
 {
   public function configure()
   {
+        unset(
+            $this['is_active'],
+            $this['is_super_admin'],
+            $this['updated_at'],
+            $this['groups_list'],
+            $this['permissions_list'],
+            $this['last_login'],
+            $this['created_at'],
+            $this['salt'],
+            $this['algorithm']
+            );
+
     $this->setWidgets(array(
-      'name' => new sfWidgetFormInputText(),
+      'username' => new sfWidgetFormInputText(),
       'password' => new sfWidgetFormInputPassword(),
       'password_again' => new sfWidgetFormInputPassword(),
       'agreement' => new sfWidgetFormInputCheckbox(),
@@ -12,7 +24,7 @@ class Step1RegistrationForm  extends BaseRegistrationForm
       ));
     $this->widgetSchema->setNameFormat('registration[%s]');
     $this->setValidators(array(
-      'name'    => new sfValidatorString(array('max_length' => 50)),
+      'username'    => new sfValidatorString(array('max_length' => 50)),
       'password' => new sfValidatorString(array('max_length' => 50)),
       'password_again' => new sfValidatorString(array('max_length' => 50)),
       'agreement' => new sfValidatorBoolean(array('required' => true)),

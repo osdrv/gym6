@@ -97,7 +97,7 @@
                 <div class="login" style="display:none;"><img id='fbavatar' src="/img/temp/av.jpg" /> You have connected via Facebook as <h2><p id="userName"></p></h2></div>
                 <div class="no_login">
                     
-                    <label><span>User name</span><?php echo include_partial('field',array('fld' => $form['name']));?></label>
+                    <label><span>User name</span><?php echo include_partial('field',array('fld' => $form['username']));?></label>
                     <label><span>Password</span><?php echo include_partial('field',array('fld' => $form['password']));?></label>
                     <label><span>Password</span><?php echo include_partial('field',array('fld' => $form['password_again']));?></label>
                     

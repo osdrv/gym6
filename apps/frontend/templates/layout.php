@@ -18,30 +18,8 @@
   });
 </script>
         <div id="page">
-        <?php if(0):?>
-            <div class="sign_popup">
-                    <?php if(0):?>
-                    <p class="error">We don't seem to know you yet. <a href="#">Sign Up</a> or try another username.</p>
-                    <?php endif; ?>
-                    <strong>User name</strong>
-                    <input type="text" class="text error_text" value="" />
-                    <strong>Password</strong>
-                    <input type="password" class="text" value="*********" />
-                        <div class="bottom_sign_popup">
-                            <input type="submit" value="" class="sign_in" />
-                            <div class="memory">
-                                <label><input type="checkbox" /> Stay signed in</label><br />
-                                <a href="<?php echo url_for('/customer/forgotpass') ?>">Forgot password?</a>
-                            </div>
-                        </div>
-                </div>
-        <?php endif; ?>
+        <?php include_component('demo', 'signin_form') ?>
             <h1 class="logo_new">GYM6<a href="/"></a></h1>
-            <?php if(1):?>
-            <div class="sign"><a href="<?php echo url_for('/customer/new') ?>">Sign Up</a>|<a href="#">Sign In</a> <!-- <div class="fb"><img src="/img/temp/fb.png" /></div> --> </div>
-            <?php else:?>
-            <div class="sign"><a href="#">Nastia Larkina</a>|<a href="#">Logout</a></div>
-            <?php endif;?>
 <div id="content">
 <?php if ($sf_user->hasFlash('notice')): ?>
 <div class="flash_notice">

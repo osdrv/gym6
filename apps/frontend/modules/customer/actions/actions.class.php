@@ -92,7 +92,25 @@ class customerActions extends sfActions
       $this->form->bind($request->getParameter('registration'));
       if ($this->form->isValid())
       {
-        $this->redirect('customer/registration2?'.http_build_query($this->form->getValues()));
+            $this->form->save();
+            // get the user object
+            $user = $this->form->getObject();
+ 
+            // get the normal user group
+            $normal_user_group = sfConfig::get('app_config_normal_user');
+ 
+            // deactivate the account, till the user verifies the account
+            //$user->setIsActive(false);
+ 
+            // set the activation token
+            //$profile = $user->getProfile();
+            //$profile->setToken(md5(time()));
+ 
+            // notify the user about the signup
+            //$this->notifySignup($user, $profile);
+            $user->setEmailAddress($user->getUsername()."@gym6.com");
+            $user->save();
+        $this->redirect('customer/registration2?user_id='.$user->getId());
       }
     }
   }

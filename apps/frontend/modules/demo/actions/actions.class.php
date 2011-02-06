@@ -17,6 +17,7 @@ class demoActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+//    $this->form = new AuthForm();
     //$this->forward('default', 'module');
   }
   public function executeFaq(sfWebRequest $request)

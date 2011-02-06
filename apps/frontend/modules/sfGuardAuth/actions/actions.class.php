@@ -6,4 +6,10 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
     {
         return $this->renderText('Here is a password reminder.');
     }
+    public function executeSignin($request)
+    {
+        $this->setTemplate(sfConfig::get('sf_app_module_dir').DIRECTORY_SEPARATOR.'demo/templates/index');//TODO
+        parent::executeSignin($request);
+    }
+
 }

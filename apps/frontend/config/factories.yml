@@ -7,6 +7,9 @@ prod:
     param:
       level:   err
       loggers: ~
+  storage:
+    param:
+      session_name: gym6
 
 test:
   storage:

@@ -3,7 +3,10 @@
 /log/*
 /web/*_dev.php
 /web/uploads/*
-
+/web/*_cache.php
+/web/*_test.php
+Thumbs.db
+.DS_Store
 # SCM files
 .arch-params
 .bzr
