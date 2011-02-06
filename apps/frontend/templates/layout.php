@@ -19,7 +19,7 @@
 </script>
         <div id="page">
         <?php include_component('demo', 'signin_form') ?>
-            <h1 class="logo_new">GYM6<a href="/"></a></h1>
+            <h1 class="logo_new">GYM6<a href="<?php echo url_for('@homepage') ?>"></a></h1>
 <div id="content">
 <?php if ($sf_user->hasFlash('notice')): ?>
 <div class="flash_notice">
