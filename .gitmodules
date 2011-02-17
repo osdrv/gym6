@@ -1,0 +1,3 @@
+[submodule "plugins/sfFacebookConnectPlugin"]
+	path = plugins/sfFacebookConnectPlugin
+	url = http://github.com/fabriceb/sfFacebookConnectPlugin.git

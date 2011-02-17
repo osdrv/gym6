@@ -21,7 +21,7 @@ class customerActions extends sfActions
             $mdays[$x][$y] =
                array('date' => date('Y.m.d',$cd),
                      'view' => date('j',$cd));
-            if($d_o_y == $last_day) $no_more_rows = true; 
+            if($d_o_y == $last_day) $no_more_rows = true;
             $d_o_y++;
         }
         if($no_more_rows) break;
@@ -62,7 +62,7 @@ class customerActions extends sfActions
     $d_o_y = date('z',$s_o_m) - $d_o_1st + 1; //День в году, с которого оторого начинаем календарь
     $this->mdays = $this->generateCalendar($d_o_y, $e_o_m, 4);
     $this->n_o_month = date("F",$s_o_m);
-    //if((date("t",$s_o_m)+$d_o_1st-1)>=28)  
+    //if((date("t",$s_o_m)+$d_o_1st-1)>=28)
     $d_o_y = $d_o_y - 7;
     $this->mdays1 = $this->generateCalendar($d_o_y,null,5);
     $this->n_o_month1 = date("F",date('m',$n)<12?mktime(0,0,1,date('m',$n)+1,1,date('Y',$n)):mktime(0,0,1,1,1,date('Y',$n)+1));
@@ -75,7 +75,6 @@ class customerActions extends sfActions
   public function executeForgotpass(sfWebRequest $request)
   {
   }
-
 
   public function executeIndex(sfWebRequest $request)
   {
@@ -90,6 +89,49 @@ class customerActions extends sfActions
     $this->forward404Unless($this->customer);
   }
 
+  public function executeFb(sfWebRequest $request)
+  {
+   $this->form = new Step1FbRegistrationForm();
+    if ($request->isMethod('post'))
+    {
+       if($request->getParameter('fbname') && $request->getParameter('fbid'))
+      {
+        $this->fbname=$request->getParameter('fbname');//TODO XSS
+        $this->fbid=$request->getParameter('fbid');
+
+        $this->form->setDefault('fbname', $request->getParameter('fbname'));
+        $this->form->setDefault('fbid', $request->getParameter('fbid'));
+      }
+      else
+      {
+          $r = $request->getParameter('registration');
+          $this->fbname=$r['fbname'];//TODO XSS
+          $this->fbid=$r['fbid'];
+          $this->form->bind($r);
+          if ($this->form->isValid())
+          {
+          	list($first_name,$last_name) = split(' ', $this->fbname, 2);
+            $user = $this->form->getObject();
+            $normal_user_group = sfConfig::get('app_config_normal_user');
+            $profile = $user->getProfile();
+            $user->setUsername('Facebook_'.$this->fbid);
+            $user->setFirstName($first_name);
+            $profile->setFirstName($first_name);
+            $user->setLastName($last_name);
+            $profile->setLastName($last_name);
+            $user->setEmailAddress($user->getUsername()."@gym6.com");
+            $user->save();
+            $profile->save();
+            $this->getUser()->setAttribute('user_id', $user->getId(), 'sfGuardSecurityUser');
+            $this->getUser()->setAuthenticated(true);
+            $this->redirect('customer/registration2');
+          }
+      }
+    }
+    else
+        $this->redirect('customer/new');
+  }
+
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Step1RegistrationForm();
@@ -101,19 +143,19 @@ class customerActions extends sfActions
         $this->form->save();
         // get the user object
         $user = $this->form->getObject();
- 
+
             // get the normal user group
         $normal_user_group = sfConfig::get('app_config_normal_user');
- 
+
             // deactivate the account, till the user verifies the account
         //$user->setIsActive(false);
- 
+
             // set the activation token
         //$profile = $user->getProfile();
         //$profile->setToken(md5(time()));
- 
+
             // notify the user about the signup
-        //$this->notifySignup($user, $profile);
+ ;      //$this->notifySignup($user, $profile);
         $user->setEmailAddress($user->getUsername()."@gym6.com");
         $user->save();
         $this->getUser()->setAttribute('user_id', $user->getId(), 'sfGuardSecurityUser');
