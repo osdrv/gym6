@@ -66,8 +66,7 @@ function registration() {
       },
       buttonSet: _complexityButtonSet,
       value_holder: $('#data_complexity')
-    }),
-    _tabs = $('#tabs').stupidtabs();
+    });
     _s1._name = 'subscriber1';
 
     _ss.scalableSet('addSubscribeHandler', _lengthSlider.scrollbarWidget('asPublisher')[0], 'slide', function(_ev, _v) { this.value(_v) });
@@ -83,16 +82,5 @@ function registration() {
     _s1.addSubscribeHandler(_monthsButtonSet.monthCalendar('asPublisher')[0], 'valueChange', function(_ev, _v) {
       $('#data_dates').val(_v.join(','))
     });
-    _s1.addSubscribeHandler(_tabs.stupidtabs('asPublisher')[0], 'tabSelect', function(_ev, _v) {
-      switch (_v) {
-        case 'simple':
-          $('#month-date-selector, #reg_setting').hide();
-          break;
-        case 'advanced':
-          $('#month-date-selector, #reg_setting').show();
-          break;
-      }
-    });
-    _tabs.stupidtabs('selectTab', 'simple');
   })
 }

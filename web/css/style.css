@@ -145,7 +145,6 @@ a {color:#2a5782;}
 .reg_date .days {background:url(../img/day.png) no-repeat; height:32px; width:335px;}
 .reg_date .days a {width:45px; margin-left:2px; float:left; line-height:30px; text-align:center; text-decoration:none; color:#5a5a5a;}	
 .reg_date .days a:hover {background:url(../img/day_select.png) top left repeat-x;}
-.reg_date .days a.select {background:#bae3fb;}
 .reg_date .days a.first {width:49px; margin:0px}
 .reg_date .days a.last {width:47px;}
 .reg_date .days a.first:hover, .reg_date .days a.first_select, .reg_date .days a.last:hover, .reg_date .days a.last_select {height:32px; background:url(../img/day_select_corner.png);}
@@ -160,6 +159,7 @@ a {color:#2a5782;}
 .reg_date .month a {line-height:30px; margin-bottom:2px; text-align:center; color:#5a5a5a; display:block; text-decoration:none;}	
 .reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}
 .reg_date .select a, .reg_date a.select {background:#bae3fb;}
+.reg_date .days a.select, .reg_date .days a.first.select, .reg_date .days a.last.select {background:#bae3fb;}
 
 .reg_date .first.select {-moz-border-radius:7px 0 0 7px; -webkit-border-radius:7px 0 0 7px; border-radius:7px 0 0 7px} 
 .reg_date .last.select {-moz-border-radius:0 7px 7px 0; -webkit-border-radius:0 7px 7px 0; border-radius:0 7px 7px 0}
@@ -171,16 +171,20 @@ a {color:#2a5782;}
 
 .reg_complexity div {background:url(../img/complexity.png) top left no-repeat; height:56px;}
 .reg_complexity div a {float:left; height:56px; text-align:center; line-height:35px; width:81px; text-decoration:none; color:#5a5a5a;}
-.reg_complexity a:hover {background:url(../img/complexity.png);}
+.reg_complexity a.select, .reg_complexity a:hover {background:url(../img/complexity.png);}
 .reg_complexity a.c1:hover {background-position:0 -56px;}
 .reg_complexity a.c2:hover {background-position:-81px -56px;}
 .reg_complexity a.c3:hover {background-position:-162px -56px;}
 .reg_complexity a.c4:hover {background-position:-243px -56px;}
-.reg_complexity a.c1_select {background:url(../img/complexity.png) 0 -112px;}
+.reg_complexity a.c1.select {background-position:0 -112px;}
+.reg_complexity a.c2.select {background-position:-81px -112px;}
+.reg_complexity a.c3.select {background-position:-162px -112px;}
+.reg_complexity a.c4.select {background-position:-243px -112px;}
+/*.reg_complexity a.c1_select {background:url(../img/complexity.png) 0 -112px;}
 .reg_complexity a.c2_select {background:url(../img/complexity.png) -81px -112px;}
 .reg_complexity a.c3_select {background:url(../img/complexity.png) -162px -112px;}
 .reg_complexity a.c4_select {background:url(../img/complexity.png) -243px -112px;}
-
+*/
 .reg_setting .slider {width:340px; margin:0 0 35px;}
 .reg_setting .slider span {position:absolute; width:100px; text-align:right; left:-110px; top:-12px; font-size:16px;}
 .reg_setting .men {width:64px; height:208px; background:url(../img/men.png); position:absolute; top:65px; left:105px;}
