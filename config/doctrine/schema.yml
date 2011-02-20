@@ -192,7 +192,7 @@ sfGuardForgotPassword:
 sfGuardUserProfile:
   tableName:     sf_guard_user_profile
   columns:
-    user_id:          { type: integer(4), notnull: true }
+    user_id:          { type: bigint(20), notnull: true }
     first_name:       { type: string(30) }
     last_name:        { type: string(30) }
     facebook_uid:     { type: string(20) }

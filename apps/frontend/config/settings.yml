@@ -34,7 +34,7 @@ all:
     # Enable the database manager
     use_database:           true
     charset:                utf-8
-    enabled_modules:      [default, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword, sfGuardGroup, sfGuardPermission, sfGuardUser]
+    enabled_modules:      [default, sfFacebookConnectAuth, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword, sfGuardGroup, sfGuardPermission, sfGuardUser]
     login_module:           sfGuardAuth
     login_action:           signin
     secure_module:          sfGuardAuth

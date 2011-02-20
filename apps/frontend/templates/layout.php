@@ -5,18 +5,8 @@
         <title>Gym6</title>
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
 <?php include_javascripts() ?>
-    </head> 
+    </head>
     <body>
-<div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-  FB.init({
-    appId  : '103051006436239',
-    status : true, // check login status
-    cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true  // parse XFBML
-  });
-</script>
         <div id="page">
         <?php include_component('demo', 'signin_form') ?>
             <h1 class="logo_new">GYM6<a href="<?php echo url_for('@homepage') ?>"></a></h1>
@@ -35,10 +25,15 @@
 <?php echo $sf_content ?>
 </div>
 
-<!-- </div> -->
+ </div>
         <div id="footer"><div>
             <p>Have any further questions, comments, or suggestions? <br /> Just <a href="#">email Julie</a>, our Client Representative and you can expect to receive a response<br /> within approximately 1—3 hours. </p>
             Gym6.com was created by Dan Bennington. Dan welcomes and appreciates your input about the Gym6 website. Please feel free to <a href="#">email Dan</a> with your comments<br /> or to find out more about business opportunities with Gym6.
         </div></div>
+<?php
+if (has_slot('fb_connect'))
+{
+  include_slot('fb_connect');
+}?>
     </body>
 </html>

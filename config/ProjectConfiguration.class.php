@@ -7,6 +7,10 @@ class ProjectConfiguration extends sfProjectConfiguration
 {
   public function setup()
   {
+      if (function_exists('date_default_timezone_set'))
+      {
+        date_default_timezone_set(@date_default_timezone_get());
+      }
     $this->enablePlugins('sfDoctrinePlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->enablePlugins('sfFacebookConnectPlugin');

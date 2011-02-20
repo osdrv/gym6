@@ -1,3 +1,9 @@
+<?php
+use_helper('sfFacebookConnect');
+slot('fb_connect');
+include_facebook_connect_script();
+end_slot();
+?>
     <div class="index">
         <a href="<?php echo url_for('@see_plans_and_pricing') ?>"></a>
     </div>
@@ -40,8 +46,8 @@
             </div>
             <div class="block c2">
                 <a href="#" class="sc"><img src="/img/sc1.png" /></a><a href="#" class="sc"><img src="/img/sc2.png" /></a><a href="#" class="sc"><img src="/img/sc3.png" /></a>
-                <a href="#" class="title">That's what friends are for</a>   
-                <img src="/img/temp/cb.png" style="float:left;" /> 
+                <a href="#" class="title">That's what friends are for</a>
+                <img src="/img/temp/cb.png" style="float:left;" />
                 <p>Easily share your Gym6 progress<br />with your friends on Facebook and Twitter. </p>
                 <p>You know you'll work harder <br />when someone's watching!</p>
             </div>
@@ -60,7 +66,7 @@
     <div class="about">
         <h2><a href="<?php echo url_for('@about') ?>">Dan Bennington</a>,</h2>
         <strong>Gym6 founder</strong>
-        <p>The Gym6 name carries over from a goal I had once set for myself to work out "six days a week for six weeks in a row" and it stands for my personal 
+        <p>The Gym6 name carries over from a goal I had once set for myself to work out "six days a week for six weeks in a row" and it stands for my personal
         commitment to providing you with an effective and time-saving personal fitness program with the freedom to choose when and how often you exercise.. </p>
     </div>
     <div class="form">
@@ -69,4 +75,3 @@
         <textarea style="color:#8a8a8a;">Ask Julie about the service, or tell her your opinion; she will answer in a couple of hours.</textarea>
         <input type="submit" class="submit" value="Ask" />
     </div>
-</div>
