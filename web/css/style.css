@@ -127,10 +127,7 @@ a {color:#2a5782;}
 .reg1 dd a span.error {position:absolute; background:url(../img/error_pointer.png) top left no-repeat #ff7178; padding:4px 4px 4px 12px; line-height:16px; font-size:12px; left:115px; color:#544b3e; margin-top:2px; width:auto; height:auto; color:#fff; white-space:nowrap;}
 .reg1 .next_step {background:url(../img/step1.png); width:163px; height:50px; display:block; margin:20px 0 30px;}
 
-
-
-				
-		.reg2 h2 {font-size:22px; font-weight:normal; color:#153448; padding:15px 0;}
+.reg2 h2 {font-size:22px; font-weight:normal; color:#153448; padding:15px 0;}
 
 .reg_date, .reg_length, .reg_complexity, .reg_setting {padding-left:320px; border-bottom:1px solid #e0e0e0; overflow:hidden; padding-bottom:20px; clear:both; zoom:1;}
 .reg_date {padding-bottom:35px;}
@@ -158,7 +155,7 @@ a {color:#2a5782;}
 .reg_date .month div {width:43px; float:left; margin-right:2px;}
 .reg_date .month a {line-height:30px; margin-bottom:2px; text-align:center; color:#5a5a5a; display:block; text-decoration:none;}	
 .reg_date .month a:hover, .reg_date .days a:hover {background:url(../img/day_select.png);}
-.reg_date .select a, .reg_date a.select {background:#bae3fb;}
+.reg_date .month a.select, .reg_date .select a, .reg_date a.select {background:#bae3fb;}
 .reg_date .days a.select, .reg_date .days a.first.select, .reg_date .days a.last.select {background:#bae3fb;}
 
 .reg_date .first.select {-moz-border-radius:7px 0 0 7px; -webkit-border-radius:7px 0 0 7px; border-radius:7px 0 0 7px} 
